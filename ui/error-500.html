@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from ventura.dreamguystech.com/laravel/template/public/error-500 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Jan 2023 23:02:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>Ventura - Error 500</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/feathericon.min.css">
+<link rel="stylesheet" href="css/style-orange.css">
+<link rel="stylesheet" href="css/style-red.css">
+<link rel="stylesheet" href="css/style-teal.css">
+
+<link rel="stylesheet" href="plugins/datatables/datatables.min.css">
+
+<link rel="stylesheet" href="css/select2.min.css">
+<link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-2.0.3.css">
+
+<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+
+<link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
+
+<link rel="stylesheet" href="plugins/light-gallery/css/lightgallery.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head> </head>
+<body class="error-page">
+<body>
+
+<div class="main-wrapper">
+<div class="error-box">
+<h1>500</h1>
+<h3 class="h2 mb-3"><i class="fa fa-warning"></i> Oops! Something went wrong</h3>
+<p class="h4 font-weight-normal">The page you requested was not found.</p>
+<a href="index-2.html" class="btn btn-primary">Back to Home</a>
+</div>
+</div>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/datatables.min.js"></script>
+
+<script src="js/form-validation.js"></script>
+
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/mask.js"></script>
+
+<script src="js/select2.min.js"></script>
+
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+
+<script src="js/jquery-ui.min.js"></script>
+<script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="plugins/fullcalendar/jquery.fullcalendar.js"></script>
+
+<script src="plugins/light-gallery/js/lightgallery-all.min.js"></script>
+
+<script src="js/script.js"></script>
+
+<script>
+			const chatAppTarget = $('.chat-window');
+			(function() {
+				if ($(window).width() > 991)
+					chatAppTarget.removeClass('chat-slide');
+				
+				$(document).on("click",".chat-window .chat-users-list a.media",function () {
+					if ($(window).width() <= 991) {
+						chatAppTarget.addClass('chat-slide');
+					}
+					return false;
+				});
+				$(document).on("click","#back_user_list",function () {
+					if ($(window).width() <= 991) {
+						chatAppTarget.removeClass('chat-slide');
+					}	
+					return false;
+				});
+
+			})();
+		</script>
+</body>
+
+<!-- Mirrored from ventura.dreamguystech.com/laravel/template/public/error-500 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Jan 2023 23:02:01 GMT -->
+</html>
