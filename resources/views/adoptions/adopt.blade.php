@@ -22,7 +22,7 @@
           <div class="product-inner">
           <img alt="alt" src="{{ asset('storage/'.$orphan->photo) }}">
           <div class="cart-btns">
-          <a href="{{ route('donations.create',[$orphan->id]) }}" class="btn btn-primary addcart-btn">Donate</a>
+          <a href="{{ route('adoptions.create',[$orphan->id]) }}" class="btn btn-primary addcart-btn">Adopt</a>
           {{-- <a href="#" class="btn btn-info proedit-btn">View</a> --}}
           </div>
           </div>

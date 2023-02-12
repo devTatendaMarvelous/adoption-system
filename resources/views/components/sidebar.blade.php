@@ -9,39 +9,49 @@
 <li class="">
 <a href="{{ route('home') }}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 </li>
-<li class="submenu">
-<a href="#"><i class="fe fe-cart"></i> <span> Ecommerce</span> <span class="menu-arrow"></span></a>
+<li class="" href="users.html">
+<a href=""><i class="fe fe-"></i> <span></span></a>
+</li>
+ <li class="submenu">
+<a href="#"><i class="fe fe-users"></i> <span> Orphans</span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
-<li><a class="" href="products.html">Products</a></li>
-<li><a class="" href="product-details.html">Product View</a></li>
-<li><a class="" href="orders.html">Orders</a></li>
-<li><a class="" href="customers.html">Customers</a></li>
-<li><a class="" href="invoice.html">Invoice</a></li>
+<li><a class="" href="{{ route('orphans') }}">All Orphans</a></li>
+<li><a class="" href="{{ route('orphans.create') }}">Add Orphan</a></li>
+
 </ul>
 </li>
-<li class="submenu">
-<a href="#"><i class="fe fe-tiled"></i> <span> Application</span> <span class="menu-arrow"></span></a>
+ <li class="submenu">
+<a href="#"><i class="fe fe-users"></i> <span> Families</span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
-<li><a class="" href="chat.html">Chat</a></li>
-<li><a class="" href="calendar.html">Calendar</a></li>
-<li><a class="" href="inbox.html">Email</a></li>
+<li><a class="" href="{{ route('families') }}">All Families</a></li>
+<li><a class="" href="{{ route('families.create') }}">Add Family</a></li>
+
 </ul>
 </li>
-<li class="menu-title">
-<span>Pages</span>
-</li>
-<li class="" href="profile.html">
-<a href="profile.html"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
-</li>
+
+
+
 <li class="submenu">
-<a href="#"><i class="fe fe-document"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
+<a href="#"><i class="fe fe-document"></i> <span> Donations </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
-<li><a class="" href="login.html"> Login </a></li>
-<li><a class="" href="register.html"> Register </a></li>
-<li><a class="" href="forgot-password.html"> Forgot Password </a></li>
+<li><a class="" href="{{ route('donations') }}"> All Donations </a></li>
+<li><a class="" href="{{ route('donations.donate') }}"> Donate </a></li>
+{{-- <li><a class="" href="forgot-password.html"> Forgot Password </a></li>
+<li><a class="" href="lock-screen.html"> Lock Screen </a></li> --}}
+</ul>
+</li>
+
+<li class="submenu">
+<a href="#"><i class="fe fe-user-plus"></i> <span> Adoptions </span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a class="" href="{{ route('adoptions') }}"> All Adoptions </a></li>
+<li><a class="" href="{{ route('adoptions.adopt') }}"> Adopt </a></li>
+<li><a class="" href="forgot-password.html">Adoption Appointments </a></li>
 <li><a class="" href="lock-screen.html"> Lock Screen </a></li>
 </ul>
 </li>
+
+{{-- 
 <li class="submenu">
 <a href="#"><i class="fe fe-warning"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
@@ -50,7 +60,7 @@
 </ul>
 </li>
 <li class="" href="users.html">
-<a href="users.html"><i class="fe fe-users"></i> <span>Users</span></a>
+<a href="{{ route('orphans') }}"><i class="fe fe-users"></i> <span>Users</span></a>
 </li>
 <li class="" href="blank-page.html">
 <a href="blank-page.html"><i class="fe fe-file"></i> <span>Blank Page</span></a>
@@ -103,7 +113,7 @@
 <a href="javascript:void(0);"> <span>Level 1</span></a>
 </li>
 </ul>
-</li>
+</li> --}}
 </ul>
 </div>
 </div>

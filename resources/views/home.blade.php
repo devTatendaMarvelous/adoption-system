@@ -28,9 +28,7 @@
 <div class="dash-widget-info">
 <h3>168</h3>
 <h6 class="text-muted">Customers</h6>
-<div class="progress progress-sm">
-<div class="progress-bar bg-primary w-50"></div>
-</div>
+
 </div>
 </div>
 </div>

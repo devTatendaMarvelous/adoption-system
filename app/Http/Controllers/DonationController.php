@@ -36,7 +36,7 @@ class DonationController extends Controller
 
         $donation['status']='Success';
         $donation['donor_id']=Auth::user()->id;
-        $donation['reference']= 'AMS'.random_int(10000,99999);
+        $donation['reference']= 'AMS-D'.random_int(10000,99999);
         Donation::create($donation);
         Toastr::success('Thank you for donating to us 🤗','Success');
         return redirect('donations');

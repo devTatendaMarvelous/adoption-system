@@ -2,16 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -53,6 +43,32 @@ Route::group(['namespace'=>'App\Http\Controllers'], function(){
         Route::post('/families/search', 'search');
     });
     // ====================================================================================================================================
+     // ====================================================================================================================================
+    
+      Route::controller(AppointmentController::class)->group(function(){
+        Route::get('/appointments', 'index')->name('appointments');
+        Route::get('/appointments/donate', 'donate')->name('appointments.donate');
+        Route::get('/appointments/{id}/create', 'create')->name('appointments.create');
+        Route::post('/appointments', 'store')->name('appointments.store');
+        Route::get('/appointments/{id}/edit', 'edit')->name('appointments.edit');
+        Route::post('/appointments/{id}', 'update')->name('appointments.update');
+        Route::get('/appointments/{id}', 'destroy')->name('appointments.delete');
+        Route::post('/families/search', 'search');
+    });
+    // ====================================================================================================================================
+      // ====================================================================================================================================
+    
+      Route::controller(AdoptionController::class)->group(function(){
+        Route::get('/adoptions', 'index')->name('adoptions');
+        Route::get('/adoptions/adopt', 'adopt')->name('adoptions.adopt');
+        Route::get('/adoptions/create/{id}', 'create')->name('adoptions.create');
+        Route::post('/adoptions', 'store')->name('adoptions.store');
+        Route::get('/adoptions/{id}/edit', 'edit')->name('adoptions.edit');
+        Route::post('/adoptions/{id}', 'update')->name('adoptions.update');
+        Route::get('/adoptions/{id}', 'destroy')->name('adoptions.delete');
+        Route::post('/families/search', 'search');
+    });
+    // ====================================================================================================================================
     // ================================Posts===============================================================================================
     Route::controller(PostsController::class)->group(function(){
         Route::get('/posts','index');
@@ -65,14 +81,6 @@ Route::group(['namespace'=>'App\Http\Controllers'], function(){
       });
     // ====================================================================================================================================
 
-   //================================Posts===============================================================================================
-    Route::controller(CommentsController::class)->group(function(){
-        Route::post('/comment/{id}','store');
-       
-        Route::delete('/comments/{id}','destroy');
-      
-      });
-    // ====================================================================================================================================
    });
 
 
