@@ -20,6 +20,7 @@ Route::group(['namespace'=>'App\Http\Controllers'], function(){
         Route::post('/orphans', 'store')->name('orphans');
         Route::get('/orphans/{id}/edit', 'edit')->name('orphans.edit');
         Route::post('/orphans/{id}/transfer', 'transferSave')->name('orphans.transfer.save');
+        Route::post('/orphans/transfer', 'transferSave')->name('transfers.search');
        Route::get('/orphans/{id}/transfer', 'transfer')->name('orphans.transfer');
         Route::post('/orphans/{id}', 'update')->name('orphans.update');
         Route::get('/orphans/{id}', 'destroy')->name('orphans.delete');
@@ -52,6 +53,7 @@ Route::group(['namespace'=>'App\Http\Controllers'], function(){
     
       Route::controller(AppointmentController::class)->group(function(){
         Route::get('/appointments', 'index')->name('appointments');
+        Route::get('/email', 'terminate');
         Route::get('/appointments/donate', 'donate')->name('appointments.donate');
         Route::get('/appointments/{id}/create', 'create')->name('appointments.create');
         Route::post('/appointments', 'store')->name('appointments.store');

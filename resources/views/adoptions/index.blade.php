@@ -62,9 +62,11 @@
                               <i class="fe fe-">x</i> Reject
                               </a>
                          @endif
+                         @if ($adoption->status=='Approved' )
                          <a href="appointments/{{ $adoption->id}}/create" class="btn btn-sm bg-info">
                          <i class="fe fe-tras"></i> Book Appointment
                          </a>
+                         @endif 
                          <a href="adoptions/{{ $adoption->id}}/delete" class="btn btn-sm bg-danger-light">
                          <i class="fe fe-trash"></i> Delete
                          </a>

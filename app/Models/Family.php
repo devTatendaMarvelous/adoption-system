@@ -14,6 +14,7 @@ class Family extends Model
             'id_num',
             'gender',
             'language',
+            'email',
             'occupation',
             'relationship_status',
     ];

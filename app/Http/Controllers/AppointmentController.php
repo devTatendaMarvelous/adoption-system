@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 
+use App\Wrappers\MailWrapper;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class AppointmentController extends Controller
 {
@@ -57,27 +60,81 @@ class AppointmentController extends Controller
    
     public function approve($id)
     {
-        $appointment=Appointment::find($id);
-        $appointment->status='Approved';
-        $appointment->save();
+        $appointment=Appointment::join('adoptions','adoptions.id','=','appointments.adoption_id')
+        ->join('families','families.id','=','adoptions.family_id')
+        ->where('appointments.id',$id)->get(['appointments.*','families.email']);
+        
 
+        $appointment[0]->status='Rejected';
+        $appointment[0]->save();
+
+
+        MailWrapper::emailNotify($appointment[0]->email,[
+                    'title'=>'Appointment Approval',
+                    'body'=>'Dear client, please be advised that your appointment  with us has been approved for the date '.Carbon::parse($appointment[0]->date)->format('d M Y')
+                ]);
         Toastr::success('Appointment Approved 🤗','Success');
         return redirect('appointments');
     }
      public function reject($id)
     {
-        $appointment=Appointment::find($id);
-        $appointment->status='Rejected';
-        $appointment->save();
+        $appointment=Appointment::join('adoptions','adoptions.id','=','appointments.adoption_id')
+        ->join('families','families.id','=','adoptions.family_id')
+        ->where('appointments.id',$id)->get(['appointments.*','families.email']);
 
+        $appointment[0]->status='Rejected';
+        $appointment[0]->save();
+
+        MailWrapper::emailNotify($appointment[0]->email,[                    
+                    'title'=>'Appointment Rejection',
+                    'body'=>'Dear client, please be advised that your appointment  with us for the date '.Carbon::parse($appointment[0]->date)->format('d M Y').' has been rejected' 
+                ]);
+                
         Toastr::success('Appointment Rejected 😒','Success');
         return redirect('appointments');
     }
+
+
     public function destroy(Request $id)
     {
         Appointment::find($id)->delete();
         Toastr::success('Appointment Deleted 🤗','Success');
         return redirect('appointments');
+    }
+
+
+
+
+    
+
+
+    public function terminate()
+    {
+        // $appointments=Appointment::all();
+        // foreach($appointments as $appointment){
+        //     $id= $appointment->id;
+            
+        //      $date=Carbon::parse($appointment->date);
+        //      $today = Carbon::today();
+        //     $diff=$date->diffInDays($today);
+
+        //     if($diff===0){
+        //         $app=Appointment::find($id);
+        //         $app->appointment_status='Teminated';
+        //         $app->save();
+
+        //     }
+        //     if($diff===1){
+                MailWrapper::emailNotify(Auth::user()->email,[
+                    
+                    'title'=>'testing',
+                    'body'=>'Dear client, please be reminded of the appointment you have with us tomorrow'
+                ]);
+
+            // }
+        //}
+        
+        return redirect('home');
     }
 
 }

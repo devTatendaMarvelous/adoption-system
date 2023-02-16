@@ -21,10 +21,15 @@ class OrphanController extends Controller
     }
     public function transfers()
     {
-       $orphans=Orphan::all();
-
+       $transfers=Transfer::join('users','users.id','=','transfers.initiator')
+                ->join('orphans','orphans.id','=','transfers.orphan_id')->get([
+                    'transfers.*',
+                    'users.name',
+                    'orphans.orphan_name'
+                ]);
+                // dd($transfers);
           
-       return view('orphans.index')->with('orphans',$orphans)->with('carbon',Carbon::class);
+       return view('orphans.transfers')->with('transfers',$transfers)->with('carbon',Carbon::class);
     }
 
 

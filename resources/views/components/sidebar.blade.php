@@ -30,7 +30,7 @@
 
 
 <li class="submenu">
-<a href="#"><i class="fe fe-document"></i> <span> Donations </span> <span class="menu-arrow"></span></a>
+<a href="#"><i class="fe fe-money"></i> <span> Donations </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
 <li><a class="" href="{{ route('donations') }}"> All Donations </a></li>
 <li><a class="" href="{{ route('donations.donate') }}"> Donate </a></li>
@@ -40,9 +40,15 @@
 </li>
 
 <li class="submenu">
-<a href="{{ route('transfers') }}"><i class="fe fe-user-plus"></i> <span> Tranfers </span> <span class="menu-arrow"></span></a>
-
+<a href="#"><i class="fe fe-user-plus"></i> <span> Adoptions </span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a class="" href="{{ route('adoptions') }}"> All Adoptions </a></li>
+<li><a class="" href="{{ route('adoptions.adopt') }}"> Adopt </a></li>
+<li><a class="" href="{{ route('appointments') }}">Adoption Appointments </a></li>
+{{-- <li><a class="" href="lock-screen.html"> Lock Screen </a></li> --}}
+</ul>
 </li>
+
 <li class="submenu">
 <a href="#"><i class="fe fe-user-plus"></i> <span> Feedback </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">

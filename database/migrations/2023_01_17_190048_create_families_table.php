@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('rep_name');
             $table->string('dob');
+            $table->string('email');
             $table->string('id_num');
             $table->string('gender');
             $table->string('language');
