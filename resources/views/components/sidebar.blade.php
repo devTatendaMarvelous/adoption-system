@@ -9,9 +9,7 @@
 <li class="">
 <a href="{{ route('home') }}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 </li>
-<li class="" href="users.html">
-<a href=""><i class="fe fe-"></i> <span></span></a>
-</li>
+
  <li class="submenu">
 <a href="#"><i class="fe fe-users"></i> <span> Orphans</span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
@@ -42,12 +40,16 @@
 </li>
 
 <li class="submenu">
-<a href="#"><i class="fe fe-user-plus"></i> <span> Adoptions </span> <span class="menu-arrow"></span></a>
+<a href="{{ route('transfers') }}"><i class="fe fe-user-plus"></i> <span> Tranfers </span> <span class="menu-arrow"></span></a>
+
+</li>
+<li class="submenu">
+<a href="#"><i class="fe fe-user-plus"></i> <span> Feedback </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
-<li><a class="" href="{{ route('adoptions') }}"> All Adoptions </a></li>
-<li><a class="" href="{{ route('adoptions.adopt') }}"> Adopt </a></li>
-<li><a class="" href="forgot-password.html">Adoption Appointments </a></li>
-<li><a class="" href="lock-screen.html"> Lock Screen </a></li>
+<li><a class="" href="{{ route('posts') }}"> All Feedbacks </a></li>
+<li><a class="" href="{{ route('posts.create') }}"> Give Feedback </a></li>
+{{-- <li><a class="" href="{{ route('appointments') }}">Adoption Appointments </a></li> --}}
+{{-- <li><a class="" href="lock-screen.html"> Lock Screen </a></li> --}}
 </ul>
 </li>
 

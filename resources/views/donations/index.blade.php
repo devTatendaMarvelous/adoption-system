@@ -17,7 +17,19 @@
      <div   class="col-sm-12">
      <div class="card card-table">
      <div class="card-header">
-     <h4 class="card-title">List of Donations</h4>
+     
+     <div class="row">
+
+          <h4 class="card-title col-md-6">List of Donations</h4>
+          <div class="col-md-6">
+               <form action="{{ route('donations.search') }}" method="post" class="row">
+                    @csrf
+                    <input type="text" name="search" placeholder="Search Donation" class="form-confrol col-6">
+                    <div class="col-1"></div>
+                    <button class="col-3 btn btn-info">Search</button>
+               </form>
+          </div>
+     </div>
      </div>
      <div class="card-body">
      <div class="table-responsive">
@@ -29,6 +41,7 @@
      <th>Currency</th>
      <th>Referrence Number</th>
      <th>Donation Type</th>
+     <th>Date Donated</th>
      <th>Status</th>
      <th class="text-center">Action</th>
      </tr>
@@ -43,6 +56,7 @@
                <td>{{ $donation->currency }}</td>
                <td>{{ $donation->reference }}</td>
                <td>{{ $donation->type }}</td>
+               <td>{{ $carbon::parse($donation->created_at )->format('d M Y') }}</td> 
                <td>{{ $donation->status }}</td> 
                <td class="text-center">
                     <div class="actions">

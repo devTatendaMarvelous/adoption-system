@@ -23,12 +23,13 @@
           <img alt="alt" src="{{ asset('storage/'.$orphan->photo) }}">
           <div class="cart-btns">
           <a href="{{ route('donations.create',[$orphan->id]) }}" class="btn btn-primary addcart-btn">Donate</a>
-          {{-- <a href="#" class="btn btn-info proedit-btn">View</a> --}}
+          <a href="{{ route('orphans.show',[$orphan->id]) }}" class="btn btn-info proedit-btn">View</a>
           </div>
           </div>
           <div class="pro-desc">
-          <h5><a href="product-details.html">{{ $orphan->orphan_name }}</a></h5>
-          <div class="price">{{ $orphan->gender }}</div>
+          <h5><a href="">{{ $orphan->orphan_name }}</a></h5>
+          <div class="price">{{ $orphan->status }}</div>
+          {{-- <div class="price">{{ $orphan->gender }}</div> --}}
           </div>
           </div>
           </div>

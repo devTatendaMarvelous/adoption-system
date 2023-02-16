@@ -20,7 +20,19 @@
 <div class="card card-table">
 
 <div class="card-header">
-<h4 class="card-title">List of Orphans</h4>
+     <div class="row">
+
+          <h4 class="card-title col-md-6">List of Orphans</h4>
+          <div class="col-md-6">
+               <form action="{{ route('orphans.search') }}" method="post" class="row">
+                    @csrf
+                    <input type="text" name="search" placeholder="Search Orphan" class="form-confrol col-6">
+                    <div class="col-1"></div>
+                    <button class="col-3 btn btn-info">Search</button>
+               </form>
+          </div>
+     </div>
+
 </div>
 
 <div class="card-body">
@@ -30,6 +42,7 @@
 <tr>
 <th>Name</th>
 <th>Date Of Birth</th>
+<th>Birth Certificate</th>
 <th>Gender</th>
 <th>Description</th>
 <th>Created at</th>
@@ -42,16 +55,20 @@
           <td>
                <h2 class="table-avatar">
                     <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="{{ $orphan->photo? asset('storage/'.$orphan->photo):'assets/img/profiles/avatar-03.jpg' }}" alt="Orphan "></a>
-                    <a href="profile.html">{{ $orphan->orphan_name }}<span>  {{ $orphan->status }}</span></a>
+                    <a href="">{{ $orphan->orphan_name }}<span>  {{ $orphan->status }}</span></a>
                </h2>
           </td>
           <td>{{ $carbon::parse($orphan->dob )->format('d M Y') }}</td>
+          <td>{{ $orphan->birth }}</td>
           <td>{{ $orphan->gender }}</td>
           <td>{{ $orphan->description }}</td>
         
           <td>{{  $carbon::parse($orphan->created_at)->format('d M Y') }}</td>
           <td class="text-center">
                <div class="actions">
+                    <a href="{{ route('orphans.transfer',[$orphan->id]) }}" class="btn btn-sm bg-success-light mr-2">
+                    <i class="fe fe-pencil"></i> Transfer
+                    </a>
                     <a href="{{ route('orphans.edit',[$orphan->id]) }}" class="btn btn-sm bg-success-light mr-2">
                     <i class="fe fe-pencil"></i> Edit
                     </a>

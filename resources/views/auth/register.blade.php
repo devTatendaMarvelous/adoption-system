@@ -3,8 +3,8 @@
 @section('content')
 
 
-<h1>Register</h1>
-<p class="account-subtitle">Access to our dashboard</p>
+<h1>Donor  Register</h1>
+<p class="account-subtitle">Register as Family? <a href="{{ route('families.create') }}">Click Here</a> </p>
 
  <form method="POST" action="{{ route('register') }}">
                         @csrf

@@ -11,6 +11,7 @@ class Orphan extends Model
     use HasFactory;
     protected $fillable=[
         'orphan_name',	'dob' ,	'gender' ,	'description' ,'status'	,'photo',
+             'birth_id'
     ];
 
         public function created_at_mdY()

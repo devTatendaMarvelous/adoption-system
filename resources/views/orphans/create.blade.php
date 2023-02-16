@@ -30,7 +30,7 @@
 <form class="needs-validation" novalidate action="{{ route('orphans') }}"  method="POST" enctype="multipart/form-data">
      @csrf
 <div class="form-row">
-<div class="col-md-6 mb-3">
+<div class="col-md-4 mb-3">
 <label for="validationCustom01">Full Name</label>
 <input type="text" class="form-control" name="orphan_name" id="validationCustom01" placeholder="Full name"  required>
 <div class="valid-feedback">
@@ -40,7 +40,17 @@ Looks good!
 Please enter Orphan full name.
 </div>
 </div>
-<div class="col-md-6 mb-3">
+<div class="col-md-4 mb-3">
+<label for="validationCustom01">Birth Certificate</label>
+<input type="text" class="form-control" name="birth_id" id="validationCustom01" placeholder="Birth Certificate Number"  required>
+<div class="valid-feedback">
+Looks good!
+</div>
+<div class="invalid-feedback">
+Please enter Orphan Birth Number.
+</div>
+</div>
+<div class="col-md-4 mb-3">
 <label for="validationCustom02">Date Of Birth</label>
 <input type="date" class="form-control" name="dob" id="validationCustom02" placeholder="Last name"  required>
 <div class="valid-feedback">

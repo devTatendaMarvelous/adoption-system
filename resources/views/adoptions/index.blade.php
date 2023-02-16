@@ -17,7 +17,18 @@
      <div   class="col-sm-12">
      <div class="card card-table">
      <div class="card-header">
-     <h4 class="card-title">List of adoptions</h4>
+     <div class="row">
+
+          <h4 class="card-title col-md-6">List of Adoption Requests</h4>
+          <div class="col-md-6">
+               <form action="{{ route('adoptions.search') }}" method="post" class="row">
+                    @csrf
+                    <input type="text" name="search" placeholder="Search Adoption" class="form-confrol col-6">
+                    <div class="col-1"></div>
+                    <button class="col-3 btn btn-info">Search</button>
+               </form>
+          </div>
+     </div>
      </div>
      <div class="card-body">
      <div class="table-responsive">
@@ -42,7 +53,15 @@
                <td>{{ $adoption->status }}</td> 
                <td class="text-center">
                     <div class="actions">
-                         
+                         @if ($adoption->status=='Pending'  )
+                              
+                              <a href="{{ route('adoptions.approve',[$adoption->id]) }}" class="btn btn-sm bg-info-light mr-2">
+                              <i class="fe fe-check"></i> Approve
+                              </a>
+                              <a href="{{route('adoptions.reject',[ $adoption->id])}}" class="btn btn-sm bg-danger-light">
+                              <i class="fe fe-">x</i> Reject
+                              </a>
+                         @endif
                          <a href="appointments/{{ $adoption->id}}/create" class="btn btn-sm bg-info">
                          <i class="fe fe-tras"></i> Book Appointment
                          </a>

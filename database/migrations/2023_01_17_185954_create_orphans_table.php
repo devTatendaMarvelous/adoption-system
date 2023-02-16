@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('orphan_name');
             $table->date('dob');
             $table->string('gender');
+            $table->string('birth_id')->unique();
             $table->text('description');
             $table->string('photo')->nullable();
             $table->string('status')->default('Pending');

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('adoption_id');
             $table->date('date');
+            $table->string('session');
+            $table->string('status')->default('Pending');
             $table->timestamps();
         });
     }

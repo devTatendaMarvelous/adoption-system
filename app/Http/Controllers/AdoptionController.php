@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Orphan;
 use App\Models\Adoption;
+use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreAdoptionRequest;
 use App\Http\Requests\UpdateAdoptionRequest;
-use Illuminate\Support\Facades\Auth;
-use App\Models\Orphan;
+
 class AdoptionController extends Controller
 {
     /**
@@ -18,9 +20,26 @@ class AdoptionController extends Controller
     public function index()
     {
         $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')->join('orphans','orphans.id','=','adoptions.orphan_id')->orderBy('id','DESC')->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
-        
+
+       
         return view('adoptions.index')->with('adoptions',$adoptions);
     }
+
+     public function search(Request $request)
+    {
+
+      $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')
+      ->join('orphans','orphans.id','=','adoptions.orphan_id')
+      ->where('ref','like',"%{$request->search}%")
+       ->orWhere('adoptions.status','like',"%{$request->search}%")
+       ->orderBy('id','DESC'
+       )->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
+
+       
+        return view('adoptions.index')->with('adoptions',$adoptions);
+    }
+
+
      public function adopt()
     {
         $orphans=Orphan::orderBy('id','DESC')->get();
@@ -41,6 +60,24 @@ class AdoptionController extends Controller
         Toastr::success('Adoption request created 🤗','Success');
         return redirect('adoptions');
         
+    }
+     public function approve($id)
+    {
+        $adoption=Adoption::find($id);
+        $adoption->status='Approved';
+        $adoption->save();
+
+        Toastr::success('adoption Approved 🤗','Success');
+        return redirect('adoptions');
+    }
+     public function reject($id)
+    {
+        $adoption=Adoption::find($id);
+        $adoption->status='Rejected';
+        $adoption->save();
+
+        Toastr::success('adoption Rejected 😒','Success');
+        return redirect('adoptions');
     }
 
     /**

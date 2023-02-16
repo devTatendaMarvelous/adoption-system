@@ -20,7 +20,17 @@
 <div class="card card-table">
 
 <div class="card-header">
-<h4 class="card-title">List of families</h4>
+          <div class="row">
+               <h4 class="card-title col-md-6">List of families</h4>
+               <div class="col-md-6">
+                    <form action="/families/search" method="post" class="row">
+                         @csrf
+                         <input type="text" name="search" placeholder="Search Families" class="form-confrol col-6">
+                         <div class="col-1"></div>
+                         <button class="col-3 btn btn-info">Search</button>
+                    </form>
+               </div>
+          </div>
 </div>
 
 <div class="card-body">

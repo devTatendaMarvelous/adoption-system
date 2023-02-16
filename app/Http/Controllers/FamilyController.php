@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Auth\RegisterController;
 use Brian2694\Toastr\Facades\Toastr;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Family;
 
@@ -14,7 +15,16 @@ class FamilyController extends Controller
       $families=Family::all();
     return view('families.index')->with('families',$families);
    }
-
+public function search(Request $request)
+    {
+        
+        $families=Family::where('rep_name','like',"%{$request->search}%")
+        ->orWhere('id_num','like',"%{$request->search}%")
+        ->orWhere('relationship_status','like',"%{$request->search}%")
+        ->orderBy('id','DESC')->get();
+        
+    return view('families.index')->with('families',$families);
+    }
 
    public function create()
    {
@@ -38,10 +48,15 @@ class FamilyController extends Controller
 
      Family::create($family);
      $family['name']=$family['rep_name'];
+     $family['role']='Family';
      RegisterController::create($family);
-
-      Toastr::success('Family added successfully 🤗','Success');
-      return redirect('families');
+     
+     if (Auth::check()) {
+         Toastr::success('Family added successfully 🤗','Success');
+         return redirect('families');
+      }else{
+         return redirect('login');
+      }
    }
 
    public function edit(Request $request,$id)

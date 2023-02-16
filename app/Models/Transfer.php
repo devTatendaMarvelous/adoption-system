@@ -5,10 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Appointment extends Model
+class Transfer extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'adoption_id','date','session',
+        'orphan_id',
+           'initiator',
+            'orphanage',
+            'notes',
+            'status',
     ];
 }

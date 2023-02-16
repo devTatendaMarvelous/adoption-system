@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        Toastr::success('Data updated successfully 🤗','Success');
+       
         return view('home');
     }
 }
