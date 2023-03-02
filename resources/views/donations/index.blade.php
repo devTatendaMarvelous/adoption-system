@@ -22,18 +22,18 @@
 
           <h4 class="card-title col-md-6">List of Donations</h4>
           <div class="col-md-6">
-               <form action="{{ route('donations.search') }}" method="post" class="row">
+               {{-- <form action="{{ route('donations.search') }}" method="post" class="row">
                     @csrf
                     <input type="text" name="search" placeholder="Search Donation" class="form-confrol col-6">
                     <div class="col-1"></div>
                     <button class="col-3 btn btn-info">Search</button>
-               </form>
+               </form> --}}
           </div>
      </div>
      </div>
      <div class="card-body">
      <div class="table-responsive">
-     <table class="table table-hover table-center mb-0">
+     <table class="datatables table table-hover table-center mb-0" id="example">
      <thead>
      <tr>
      <th>Donated By</th>
@@ -43,7 +43,7 @@
      <th>Donation Type</th>
      <th>Date Donated</th>
      <th>Status</th>
-     <th class="text-center">Action</th>
+     {{-- <th class="text-center">Action</th> --}}
      </tr>
      </thead>
      <tbody>
@@ -60,10 +60,10 @@
                <td>{{ $donation->status }}</td> 
                <td class="text-center">
                     <div class="actions">
-                         
+{{--                          
                          <a href="donations/{{ $donation->id}}/delete" class="btn btn-sm bg-danger-light">
                          <i class="fe fe-trash"></i> Delete
-                         </a>
+                         </a> --}}
                     </div>
                </td>
           </tr>

@@ -97,6 +97,7 @@ Please provide a photo.
      <option value="Adopted">Adopted</option>
      <option value="Returned">Returned</option>
      <option value="Matured">Matured</option>
+     <option value="Deceased">Deceased</option>
 </select>
 
 </div>

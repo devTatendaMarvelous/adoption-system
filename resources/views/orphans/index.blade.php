@@ -59,7 +59,7 @@
                </h2>
           </td>
           <td>{{ $carbon::parse($orphan->dob )->format('d M Y') }}</td>
-          <td>{{ $orphan->birth }}</td>
+          <td>{{ $orphan->birth_id }}</td>
           <td>{{ $orphan->gender }}</td>
           <td>{{ $orphan->description }}</td>
         

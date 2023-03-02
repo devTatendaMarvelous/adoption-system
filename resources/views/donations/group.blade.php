@@ -43,10 +43,25 @@ Please enter Donation Amount.
 </div>
 
 <div class="col-md-2 mb-3">
-<label for="validationCustom04">Donation Type</label>
+<label for="validationCustom04">Gender</label>
 
 <select name="type" class="form-control" id="validationCustom04">
-     <option value="Individual">Individual</option>
+     <option value="0">Both</option>
+     <option value="Male">Male</option>
+     <option value="Female">Female</option>
+</select>
+<div class="invalid-feedback">
+
+</div>
+</div>
+<div class="col-md-2 mb-3">
+<label for="validationCustom04">Age Group</label>
+
+<select name="age" class="form-control text-center" id="validationCustom04">
+     <option value="0-5">0-5</option>
+     <option value="6-10">6-10</option>
+     <option value="10-14">10-14</option>
+     <option value="15-18">15-18</option>
 </select>
 <div class="invalid-feedback">
 

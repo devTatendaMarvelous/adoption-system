@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 
 
-Route::group(['namespace'=>'App\Http\Controllers'], function(){
+Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], function(){
 // ================================Orphans======================================================================================
     Route::controller(OrphanController::class)->group(function(){
       Route::post('/orphans/search', 'search')->name('orphans.search');
@@ -42,6 +42,7 @@ Route::group(['namespace'=>'App\Http\Controllers'], function(){
         Route::post('/donations/search', 'search')->name('donations.search');
         Route::get('/donations', 'index')->name('donations');
         Route::get('/donations/donate', 'donate')->name('donations.donate');
+        Route::get('/donations/group', 'group')->name('donations.group');
         Route::get('/donations/create/{id}', 'create')->name('donations.create');
         Route::post('/donations', 'store')->name('donations.store');
         Route::get('/donations/{id}/edit', 'edit')->name('donations.edit');

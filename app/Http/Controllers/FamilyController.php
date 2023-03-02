@@ -49,6 +49,7 @@ public function search(Request $request)
      Family::create($family);
      $family['name']=$family['rep_name'];
      $family['role']='Family';
+     
      RegisterController::create($family);
      
      if (Auth::check()) {

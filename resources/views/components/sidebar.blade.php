@@ -1,4 +1,3 @@
- 
 <div class="sidebar" id="sidebar">
 <div class="sidebar-inner slimscroll">
 <div id="sidebar-menu" class="sidebar-menu">
@@ -10,6 +9,7 @@
 <a href="{{ route('home') }}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 </li>
 
+@if (Auth::user()->role==="Admin")
  <li class="submenu">
 <a href="#"><i class="fe fe-users"></i> <span> Orphans</span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
@@ -27,17 +27,19 @@
 </ul>
 </li>
 
-
+@endif
 
 <li class="submenu">
 <a href="#"><i class="fe fe-money"></i> <span> Donations </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
+    
 <li><a class="" href="{{ route('donations') }}"> All Donations </a></li>
 <li><a class="" href="{{ route('donations.donate') }}"> Donate </a></li>
-{{-- <li><a class="" href="forgot-password.html"> Forgot Password </a></li>
-<li><a class="" href="lock-screen.html"> Lock Screen </a></li> --}}
+<li><a class="" href="{{ route('donations.group') }}"> Group Donate </a></li>
 </ul>
 </li>
+@if (Auth::user()->role != 'Donor')
+     
 
 <li class="submenu">
 <a href="#"><i class="fe fe-user-plus"></i> <span> Adoptions </span> <span class="menu-arrow"></span></a>
@@ -48,11 +50,13 @@
 {{-- <li><a class="" href="lock-screen.html"> Lock Screen </a></li> --}}
 </ul>
 </li>
-
+@endif
 <li class="submenu">
 <a href="#"><i class="fe fe-user-plus"></i> <span> Feedback </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
+@if (Auth::user()->role==="Admin")
 <li><a class="" href="{{ route('posts') }}"> All Feedbacks </a></li>
+@endif
 <li><a class="" href="{{ route('posts.create') }}"> Give Feedback </a></li>
 {{-- <li><a class="" href="{{ route('appointments') }}">Adoption Appointments </a></li> --}}
 {{-- <li><a class="" href="lock-screen.html"> Lock Screen </a></li> --}}

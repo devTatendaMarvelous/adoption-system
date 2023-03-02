@@ -21,18 +21,13 @@
 
           <h4 class="card-title col-md-6">List of Adoption Requests</h4>
           <div class="col-md-6">
-               <form action="{{ route('adoptions.search') }}" method="post" class="row">
-                    @csrf
-                    <input type="text" name="search" placeholder="Search Adoption" class="form-confrol col-6">
-                    <div class="col-1"></div>
-                    <button class="col-3 btn btn-info">Search</button>
-               </form>
+               
           </div>
      </div>
      </div>
-     <div class="card-body">
+     <div class="card-body p-4">
      <div class="table-responsive">
-     <table class="table table-hover table-center mb-0">
+     <table class="table table-hover table-center mb-0" id="example">
      <thead>
      <tr>
      <th>Orphan </th>

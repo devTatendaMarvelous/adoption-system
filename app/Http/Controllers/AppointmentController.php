@@ -65,7 +65,7 @@ class AppointmentController extends Controller
         ->where('appointments.id',$id)->get(['appointments.*','families.email']);
         
 
-        $appointment[0]->status='Rejected';
+        $appointment[0]->status='Approved';
         $appointment[0]->save();
 
 
@@ -103,36 +103,52 @@ class AppointmentController extends Controller
     }
 
 
-
-
-    
-
-
     public function terminate()
     {
-        // $appointments=Appointment::all();
-        // foreach($appointments as $appointment){
-        //     $id= $appointment->id;
+        $appointments=Appointment::join('adoptions','adoptions.id','=','appointments.adoption_id')
+        ->join('families','families.id','=','adoptions.family_id')
+        ->get(['appointments.*','families.email']);
+        foreach($appointments as $appointment){
+
             
-        //      $date=Carbon::parse($appointment->date);
-        //      $today = Carbon::today();
-        //     $diff=$date->diffInDays($today);
+            if($appointment->status==='Terminated'){
+                continue;
+            }else{
 
-        //     if($diff===0){
-        //         $app=Appointment::find($id);
-        //         $app->appointment_status='Teminated';
-        //         $app->save();
+                $date=Carbon::parse($appointment->date);
+                $yest=$date->isYesterday();
+                $tomr=$date->isTomorrow();
+                //  dd($appointment->status,$tomr,$yest);
 
-        //     }
-        //     if($diff===1){
-                MailWrapper::emailNotify(Auth::user()->email,[
+                if($yest===true){
                     
-                    'title'=>'testing',
-                    'body'=>'Dear client, please be reminded of the appointment you have with us tomorrow'
-                ]);
+                    $appointment->status='Terminated';
+                    $appointment->save();
 
-            // }
-        //}
+                    MailWrapper::emailNotify($appointment->email,[
+                        
+                        'title'=>'Termination of the adoption appointment',
+                        'body'=>'Dear client, please be advised that your appointment  with us for the day '.$date->format('d M Y').' has been  terminated.'
+                    ]);
+
+                }elseif($tomr==true){
+                    if($appointment->status==='Reminded'){
+                        continue;
+                    }
+                        $appointment->status='Reminded';
+                        $appointment->save();
+                        MailWrapper::emailNotify($appointment->email,[
+                            
+                            'title'=>'testing',
+                            'body'=>'Dear client, please be reminded of the appointment you have with us tomorrow'
+                        ]);
+                    
+
+                }
+            }
+            
+             
+        }
         
         return redirect('home');
     }

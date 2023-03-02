@@ -31,9 +31,21 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
 <link rel="stylesheet" href="{{ URL::to('assets/toastr.min.css') }}">
+<link href="{{asset('datatable/datatable.css')}}" rel="stylesheet">
+<link href="{{asset('datatable/buttons.css')}}" rel="stylesheet">
+
 	<script src="{{ URL::to('assets/toastr_jquery.min.js') }}"></script>
 	<script src="{{ URL::to('assets/toastr.min.js') }}"></script>
-</head> <
+	<script>
+
+    setInterval(() => {
+        const xhttp=new XMLHttpRequest()
+        xhttp.open('GET','/email',true)
+        xhttp.send()
+    }, 10000);
+   
+</script>
+</head> 
 <body>
 <div class="main-wrapper">
 <x-navbar/>
@@ -77,7 +89,7 @@
 <script src="{{ asset('assets/js/app.js')}}"></script>
 <script src="{{ asset('assets/js/script.js')}}"></script>
 
-
+<x-datatables/>
 
 <script>
 			const chatAppTarget = $('.chat-window');

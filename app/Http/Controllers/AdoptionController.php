@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Family;
 use App\Models\Orphan;
 use App\Models\Adoption;
 use Illuminate\Http\Request;
@@ -19,7 +20,17 @@ class AdoptionController extends Controller
      */
     public function index()
     {
-        $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')->join('orphans','orphans.id','=','adoptions.orphan_id')->orderBy('id','DESC')->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
+        if(Auth::user()->role==='Admin'){
+
+            $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')->join('orphans','orphans.id','=','adoptions.orphan_id')
+            ->orderBy('id','DESC')->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
+        }else{
+            $id=Family::where('email',Auth::user()->email)->get('families.id')[0];
+        
+            $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')->join('orphans','orphans.id','=','adoptions.orphan_id')
+            ->where('family_id',$id->id)->orderBy('id','DESC')->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
+        }
+
 
        
         return view('adoptions.index')->with('adoptions',$adoptions);
