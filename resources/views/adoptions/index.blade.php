@@ -49,13 +49,15 @@
                <td class="text-center">
                     <div class="actions">
                          @if ($adoption->status=='Pending'  )
-                              
+                              @if (Auth::user()->role==='Admin')
+                                   
                               <a href="{{ route('adoptions.approve',[$adoption->id]) }}" class="btn btn-sm bg-info-light mr-2">
                               <i class="fe fe-check"></i> Approve
                               </a>
                               <a href="{{route('adoptions.reject',[ $adoption->id])}}" class="btn btn-sm bg-danger-light">
                               <i class="fe fe-">x</i> Reject
                               </a>
+                              @endif
                          @endif
                          @if ($adoption->status=='Approved' )
                          <a href="appointments/{{ $adoption->id}}/create" class="btn btn-sm bg-info">

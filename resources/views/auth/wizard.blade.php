@@ -72,7 +72,7 @@
     <div class="col-md-3">
         <h5>Do you have a current home study or foster care license in your state of residence? </h5>
                 <div class="form-check">
-                    <input class="form-check-input  " type="radio" name="foster_license" id="yesl" value="1">
+                    <input class="form-check-input  " type="radio" name="license" id="yesl" value="1">
                     <label class="form-check-label last" for="yesl">
                         Yes 
                     </label>
@@ -80,7 +80,7 @@
             
             <div class="form-check">
                 <div class="">
-            <input class="form-check-input  " type="radio" name="foster_license" id="l"  value="0">
+            <input class="form-check-input  " type="radio" name="license" id="l"  value="0">
             <label class="form-check-label " for="l">
                 No
             </label>
@@ -88,7 +88,7 @@
             </div>
             <div class="form-check">
                 <div class="">
-                    <input class="form-check-input " style="margin-left: -55px;"  type="radio" name="foster_license" id="l" value="2">
+                    <input class="form-check-input " style="margin-left: -55px;"  type="radio" name="license" id="l" value="2">
                     <label class="form-check-label " for="l" >
                         Do not know 
                     </label>
@@ -101,7 +101,7 @@
                 
             <div class="form-check">
                 <div class="">
-                    <input class="form-control "   type="date" name="foster_license" id="l" value="2">
+                    <input class="form-control "   type="date" name="date_completed" id="l" value="2">
                     
             </div>
             </div>
@@ -137,17 +137,17 @@
         <div class="col-md-12 my-5 text center">
             Race:
              <div class="form-check">
-                    <input type="checkbox" name="race[]" id=""class="form-check-input"  value="African" >
+                    <input type="checkbox" name="race" id=""class="form-check-input"  value="African" >
                     
                     <label class="form-check-label ml-5">African</label>
             </div> 
             <div class="form-check">
-                    <input type="checkbox" name="race[]" id=""class="form-check-input"  value="African" >
+                    <input type="checkbox" name="race" id=""class="form-check-input"  value="African" >
                     
                     <label class="form-check-label ml-5">Asian</label>
             </div> 
             <div class="form-check">
-                    <input type="checkbox" name="race[]" id=""class="form-check-input mr-5"  value="African" >
+                    <input type="checkbox" name="race" id=""class="form-check-input mr-5"  value="African" >
                     
                     <label class="form-check-label ml-5" > American</label>
             </div> 

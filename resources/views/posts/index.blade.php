@@ -48,7 +48,8 @@
           <td>{{ $post->title }}</td>
           <td>{{ $post->body }}</td>
           <td>@if ($post->file)
-               {{ asset('storage/'.$post->file) }}
+                    <a href="{{ asset('storage/'.$post->file) }}" target="_blank" rel="noopener noreferrer">View File</a>
+               
                @else
                     <span> no file</span>
                @endif

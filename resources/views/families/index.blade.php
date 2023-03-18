@@ -62,6 +62,9 @@
           <td>{{  $familie->created_at }}</td>
           <td class="text-center">
                <div class="actions">
+                    <a href="{{ route('families.show',[$familie->id]) }}" class="btn btn-sm bg-success-light mr-2">
+                    <i class="fe fe-eye"></i> View
+                    </a>
                     <a href="{{ route('families.edit',[$familie->id]) }}" class="btn btn-sm bg-success-light mr-2">
                     <i class="fe fe-pencil"></i> Edit
                     </a>

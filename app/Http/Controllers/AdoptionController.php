@@ -64,7 +64,11 @@ class AdoptionController extends Controller
      */
     public function create($id)
     {
-        $orphan['family_id']=Auth::user()->id;
+        $email=Auth::user()->email;
+        $family=Family::where('email',$email)->get();
+        $fam_id=$family[0]->id;
+        
+        $orphan['family_id']=$fam_id;
         $orphan['orphan_id']=$id;
         $orphan['ref']= 'AMS-A'.random_int(10000,99999);
         Adoption::create($orphan);

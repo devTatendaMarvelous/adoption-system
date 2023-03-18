@@ -32,7 +32,8 @@ class MailWrapper
          if($is_conn){
              Mail::to($emailAddress)->send(new Notifications($mailData));
          }else{
-            dd('No internet at the moment','Success');
+            Toastr::error('Email Not Sent. No internet at the moment 😒','error');
+            
          }
 
         return back();

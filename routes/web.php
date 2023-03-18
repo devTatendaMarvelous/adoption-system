@@ -4,11 +4,32 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return redirect('login');
+Route::group(['namespace'=>'App\Http\Controllers'], function() {
+
+    Route::controller(WebsiteController::class)->group(function () {
+        // Route::post('/families/search', 'search')->name('families.search');
+        Route::get('/', 'index');
+        Route::get('/about', 'about');
+        // Route::post('/families', 'store')->name('families.store');
+        // Route::get('/families/{id}/edit', 'edit')->name('families.edit');
+        // Route::post('/families/{id}', 'update')->name('families.update');
+        // Route::get('/families/{id}', 'destroy')->name('families.delete');
+    });
 });
 
+Route::group(['namespace'=>'App\Http\Controllers'], function() {
 
+    Route::controller(FamilyController::class)->group(function () {
+        Route::post('/families/search', 'search')->name('families.search');
+        Route::get('/families', 'index')->name('families');
+        Route::get('/families/create', 'create')->name('families.create');
+        Route::post('/families', 'store')->name('families.store');
+        Route::get('/families/{id}/edit', 'edit')->name('families.edit');
+        Route::get('/families/{id}/show', 'show')->name('families.show');
+        Route::post('/families/{id}', 'update')->name('families.update');
+        Route::get('/families/{id}/delete', 'destroy')->name('families.delete');
+    });
+});
 
 Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], function(){
 // ================================Orphans======================================================================================
@@ -27,17 +48,9 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
         Route::get('/orphans/{id}/show', 'show')->name('orphans.show');
     });
 
-      Route::controller(FamilyController::class)->group(function(){
-        Route::post('/families/search', 'search')->name('families.search');
-        Route::get('/families', 'index')->name('families');
-        Route::get('/families/create', 'create')->name('families.create');
-        Route::post('/families', 'store')->name('families.store');
-        Route::get('/families/{id}/edit', 'edit')->name('families.edit');
-        Route::post('/families/{id}', 'update')->name('families.update');
-        Route::get('/families/{id}', 'destroy')->name('families.delete');
-    });
+
     // ====================================================================================================================================
-    
+
       Route::controller(DonationController::class)->group(function(){
         Route::post('/donations/search', 'search')->name('donations.search');
         Route::get('/donations', 'index')->name('donations');
@@ -51,7 +64,7 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
     });
     // ====================================================================================================================================
      // ====================================================================================================================================
-    
+
       Route::controller(AppointmentController::class)->group(function(){
         Route::get('/appointments', 'index')->name('appointments');
         Route::get('/email', 'terminate');
@@ -62,12 +75,12 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
         Route::post('/appointments/{id}', 'update')->name('appointments.update');
         Route::get('/appointments/{id}/delete', 'destroy')->name('appointments.delete');
         Route::get('/appointments/{id}/approve', 'approve')->name('appointments.approve');
-        Route::get('/appointments/{id}/reject', 'reject')->name('appointments.reject');
+        Route::post('/appointments/{id}/reject', 'reject')->name('appointments.reject');
         // Route::post('/families/search', 'search');
     });
     // ====================================================================================================================================
       // ====================================================================================================================================
-    
+
       Route::controller(AdoptionController::class)->group(function(){
         Route::get('/adoptions', 'index')->name('adoptions');
         Route::post('/adoptions/search', 'search')->name('adoptions.search');
@@ -90,12 +103,11 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
         Route::get('/posts/{id}/edit','edit')->name('posts.edit');
         Route::post('/posts/{id}/update','update')->name('posts.update');
         Route::get('/posts/{id}','destroy')->name('posts.delete');
-      
+
       });
     // ====================================================================================================================================
 
    });
-
 
 
 

@@ -52,9 +52,12 @@
                          <a href="{{ route('appointments.approve',[$appointment->id]) }}" class="btn btn-sm bg-info-light mr-2">
                          <i class="fe fe-check"></i> Approve
                          </a>
-                         <a href="{{route('appointments.reject',[ $appointment->id])}}" class="btn btn-sm bg-danger-light">
-                         <i class="fe fe-">x</i> Reject
-                         </a>
+
+                         <button type="button" class="btn btn-sm bg-danger-light" data-toggle="modal" data-target="#exampleModal{{ $appointment->id }}">
+                              Reject
+                              </button>
+                              <x-reject :appointment="$appointment"/>
+                         
                          @endif
                           <a href="{{ route('appointments.edit',[$appointment->id]) }}" class="btn btn-sm bg-success-light mr-2">
                          <i class="fe fe-pencil"></i> Edit
@@ -78,5 +81,11 @@
      </div>
 </div>
 </div>
+
+
+
+
+
+
 
 </x-dashboard>

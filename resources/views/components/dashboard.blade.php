@@ -14,8 +14,8 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/feathericon.min.css')}}">
 <link rel="stylesheet" href="{{ asset('assets/css/style-orange.css')}}">
-<link rel="stylesheet" href="{{ asset('assets/css/style-red.css')}}">
-<link rel="stylesheet" href="{{ asset('assets/css/style-teal.css')}}">
+{{--<link rel="stylesheet" href="{{ asset('assets/css/style-red.css')}}">--}}
+{{--<link rel="stylesheet" href="{{ asset('assets/css/style-teal.css')}}">--}}
 
 <link rel="stylesheet" href="{{ asset('assets/plugins/datatables/datatables.min.css')}}">
 
@@ -42,10 +42,10 @@
         const xhttp=new XMLHttpRequest()
         xhttp.open('GET','/email',true)
         xhttp.send()
-    }, 10000);
-   
+    }, 20000);
+
 </script>
-</head> 
+</head>
 <body>
 <div class="main-wrapper">
 <x-navbar/>
@@ -96,8 +96,8 @@
 			(function() {
 				if ($(window).width() > 991)
 					chatAppTarget.removeClass('chat-slide');
-				
-				$(document).on("click",".chat-window .chat-users-list a.media",function () {
+
+				$(document).on("click",".chat-w indow .chat-users-list a.media",function () {
 					if ($(window).width() <= 991) {
 						chatAppTarget.addClass('chat-slide');
 					}
@@ -106,7 +106,7 @@
 				$(document).on("click","#back_user_list",function () {
 					if ($(window).width() <= 991) {
 						chatAppTarget.removeClass('chat-slide');
-					}	
+					}
 					return false;
 				});
 

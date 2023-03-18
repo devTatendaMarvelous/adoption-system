@@ -39,6 +39,7 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
+        
         $post=$request->validate([
             'title'=>'required',
             'body'=>'required',
@@ -49,6 +50,7 @@ class PostController extends Controller
             
         }
         $post['user_id']=Auth::user()->id;
+        
         Post::create($post);
         Toastr::success(' Post created successfully 🤗','Success');
         return redirect('posts');

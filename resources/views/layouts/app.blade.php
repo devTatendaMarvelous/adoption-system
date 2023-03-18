@@ -17,8 +17,8 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/feathericon.min.css')}}">
 <link rel="stylesheet" href="{{ asset('assets/css/style-orange.css')}}">
-<link rel="stylesheet" href="{{ asset('assets/css/style-red.css')}}">
-<link rel="stylesheet" href="{{ asset('assets/css/style-teal.css')}}">
+{{--<link rel="stylesheet" href="{{ asset('assets/css/style-red.css')}}">--}}
+{{--<link rel="stylesheet" href="{{ asset('assets/css/style-teal.css')}}">--}}
 
 <link rel="stylesheet" href="{{ asset('assets/plugins/datatables/datatables.min.css')}}">
 
@@ -89,7 +89,7 @@
 			(function() {
 				if ($(window).width() > 991)
 					chatAppTarget.removeClass('chat-slide');
-				
+
 				$(document).on("click",".chat-window .chat-users-list a.media",function () {
 					if ($(window).width() <= 991) {
 						chatAppTarget.addClass('chat-slide');
@@ -99,7 +99,7 @@
 				$(document).on("click","#back_user_list",function () {
 					if ($(window).width() <= 991) {
 						chatAppTarget.removeClass('chat-slide');
-					}	
+					}
 					return false;
 				});
 

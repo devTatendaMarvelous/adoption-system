@@ -76,8 +76,9 @@ class AppointmentController extends Controller
         Toastr::success('Appointment Approved 🤗','Success');
         return redirect('appointments');
     }
-     public function reject($id)
+     public function reject(Request $request, $id)
     {
+       
         $appointment=Appointment::join('adoptions','adoptions.id','=','appointments.adoption_id')
         ->join('families','families.id','=','adoptions.family_id')
         ->where('appointments.id',$id)->get(['appointments.*','families.email']);
@@ -87,7 +88,7 @@ class AppointmentController extends Controller
 
         MailWrapper::emailNotify($appointment[0]->email,[                    
                     'title'=>'Appointment Rejection',
-                    'body'=>'Dear client, please be advised that your appointment  with us for the date '.Carbon::parse($appointment[0]->date)->format('d M Y').' has been rejected' 
+                    'body'=>'Dear client, please be advised that your appointment  with us for the date '.Carbon::parse($appointment[0]->date)->format('d M Y').' has been rejected. Reason for rejection:'.$request->description 
                 ]);
                 
         Toastr::success('Appointment Rejected 😒','Success');
@@ -139,7 +140,7 @@ class AppointmentController extends Controller
                         $appointment->save();
                         MailWrapper::emailNotify($appointment->email,[
                             
-                            'title'=>'testing',
+                            'title'=>'Appointment Reminder',
                             'body'=>'Dear client, please be reminded of the appointment you have with us tomorrow'
                         ]);
                     

@@ -1,4 +1,4 @@
- 
+
 
 <script type="text/javascript" src="{{asset('datatable/datatablejQueryMin.js')}}"></script>
 <script type="text/javascript" src="{{asset('datatable/buttondatatablejQueryMin.js')}}"></script>
@@ -46,3 +46,4 @@
             font-size: 13px;
 
         }
+    </style>
