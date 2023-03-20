@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
-use Brian2694\Toastr\Facades\Toastr;
+use Carbon\Carbon;
 use App\Models\Orphan;
 use App\Models\Transfer;
-use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class OrphanController extends Controller
 {
@@ -72,6 +72,40 @@ class OrphanController extends Controller
         return redirect('orphans');
         
     }
+
+public function convertDate($dt)
+{
+    $date = str_replace('/', '-', $dt);
+                    $newDate = date("Y-m-d", strtotime($date));
+                    return $newDate;
+}
+
+    public function csv(Request $request)
+    {
+        $csvData=fopen($request->file('csv'),'r');
+        $transRow = true;
+        while (($data = fgetcsv($csvData, 555, ',')) !== false) {
+            if (!$transRow) {
+                
+                Orphan::create([
+                    'orphan_name' => $data['0'],
+
+                    
+                    'dob' =>  $this->convertDate($data['1']),
+                    'gender' => $data['2'],
+                    'birth_id' => $data['3'],
+                    'description' => $data['4'],
+                ]);
+            }
+            $transRow = false;
+        }
+        fclose($csvData);
+
+        
+        Toastr::success('Orphans added successfully 🤗','Success');
+        return redirect('orphans');
+    }
+
 
 
     public function edit($id)

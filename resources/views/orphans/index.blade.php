@@ -21,8 +21,14 @@
 
 <div class="card-header">
      <div class="row">
+          
+                              
 
-          <h4 class="card-title col-md-6">List of Orphans</h4>
+          <h4 class="card-title col-md-3">List of Orphans</h4>
+          <button type="button" class="col-md-2 btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">
+                              Upload CSV
+                              </button>
+                              <div class="col-md-1"></div>
           <div class="col-md-6">
                <form action="{{ route('orphans.search') }}" method="post" class="row">
                     @csrf
@@ -93,4 +99,44 @@
 </div>
 </div>
 </div>
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Attach CSV</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="{{ route('orphans.csv') }}" method="post" enctype="multipart/form-data">
+          @csrf
+           <div class="modal-body">
+              
+               <div class="form-group">
+                    <input type="file" name="csv"class="form-control">
+               </div>
+            
+           </div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             <button type="submit" class="btn btn-primary">Upload</button>
+           </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 </x-dashboard>

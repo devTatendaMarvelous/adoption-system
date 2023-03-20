@@ -39,6 +39,7 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
         Route::get('/orphans/transfers', 'transfers')->name('transfers');
         Route::get('/orphans/create', 'create')->name('orphans.create');
         Route::post('/orphans', 'store')->name('orphans');
+        Route::post('/orphans/csv', 'csv')->name('orphans.csv');
         Route::get('/orphans/{id}/edit', 'edit')->name('orphans.edit');
         Route::post('/orphans/{id}/transfer', 'transferSave')->name('orphans.transfer.save');
         Route::post('/orphans/transfer', 'transferSave')->name('transfers.search');

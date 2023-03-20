@@ -1,5 +1,7 @@
 
 <x-dashboard>
+
+     
 <div class="page-wrapper">
 <div class="content container-fluid">
 
@@ -32,17 +34,19 @@
      <input type="hidden" name="id" value="{{ $id }}" >
 <div class="form-row">
 <div class="col-md-6 mb-3">
-<label for="validationCustom01">Amount</label>
-<input class="form-control"  type="number" name="amount" id="validationCustom01" placeholder="Amount"  required>
-<div class="valid-feedback">
-Looks good!
-</div>
-<div class="invalid-feedback">
-Please enter Donation Amount.
-</div>
-</div>
-
-<div class="col-md-2 mb-3">
+     <div class="row">
+          <div class="col-12">
+          <label for="validationCustom01">Amount</label>
+          <input class="form-control"  type="number" name="amount" id="validationCustom01" placeholder="Amount"  required>
+          <div class="valid-feedback">
+          Looks good!
+          </div>
+          <div class="invalid-feedback">
+          Please enter Donation Amount.
+          </div>
+          </div>
+          </div>
+          <div class="col-12 mb-3">
 <label for="validationCustom04">Donation Type</label>
 
 <select name="type" class="form-control" id="validationCustom04">
@@ -53,21 +57,29 @@ Please enter Donation Amount.
 </div>
 </div>
 
-<div class="col-md-2 mb-3">
+<div class="col-12 mb-3">
 <label for="validationCustom04">Currency</label>
 
 <select name="currency" class="form-control" id="validationCustom04">
-     <option value="USD">USD</option>
-     <option value="ZWL">ZWL</option>
+     <option value="USD" onclick="show()">USD</option>
+     <option value="ZWL" onclick="hide()">ZWL</option>
 </select>
 <div class="invalid-feedback">
 
 </div>
-</div></div>
+</div>
+
+
+     </div>
+     <div class="col-md-6">
+          <x-creditCard/>
+     </div>
+</div>
+
 
 <div class="col-md-2 text-center">
 
-     <button class="btn btn-primary" type="submit"> Donate</button>
+     <button class="btn btn-primary col-12" type="submit"> Donate</button>
 </div>
 </form>
 </div>
@@ -83,5 +95,8 @@ Please enter Donation Amount.
 
 </div>
 </div>
+
+
+
 
 </x-dashboard>
