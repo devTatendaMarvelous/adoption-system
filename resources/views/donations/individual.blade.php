@@ -20,7 +20,7 @@
           <div class="col-xl-3 col-sm-6 col-12">
           <div class="product">
           <div class="product-inner">
-          <img alt="alt" src="{{ asset('storage/'.$orphan->photo) }}">
+          <img alt="{{ $orphan->orphan_name }}" src="{{ $orphan->photo? asset('storage/'.$orphan->photo):'/noimage.png'  }}">
           <div class="cart-btns">
           <a href="{{ route('donations.create',[$orphan->id]) }}" class="btn btn-primary addcart-btn">Donate</a>
           <a href="{{ route('orphans.show',[$orphan->id]) }}" class="btn btn-info proedit-btn">View</a>

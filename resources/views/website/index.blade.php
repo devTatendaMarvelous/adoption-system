@@ -34,9 +34,8 @@
                                 <div class="col-xl-7">
                                     <div class="main-slider__content">
                                         <h2>Give the <span>Poor</span> Help <br> for Families.</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum Fasts by <br> injected
-                                            humour, or randomised words which... </p>
-                                        <a href="about.html" class="thm-btn main-slider__btn">Leran More</a>
+                                        <p>A national project working to ensure that children and teens in foster care get safe, loving, permanent families.</p>
+                                        <a href="/about" class="thm-btn main-slider__btn">Learn More</a>
                                         <div class="main-slider-arrow">
                                             <img src="website/images/shapes/main-slider-shape-1.png" class="float-bob-x"
                                                 alt="">
@@ -63,10 +62,9 @@
                             <div class="row">
                                 <div class="col-xl-7">
                                     <div class="main-slider__content">
-                                        <h2>Lets <span>Chenge</span> The World <br> With Humanity.</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum Fasts by <br> injected
-                                            humour, or randomised words which... </p>
-                                        <a href="about.html" class="thm-btn main-slider__btn">Leran More</a>
+                                        <h2>Lets <span>Change</span> The World <br> With Humanity.</h2>
+                                        <p>Give A New Life And Brighter Future For Children Who May Be Left Helpless And Alone. Where there is extreme poverty, there are always orphans and abandoned children. Political conflict, inefficient governance, corruption and poor access to care create an environment where children are most affected. Our goal is to provide sustainable and intensive support to the most marginalized and vulnerable children.</p>
+                                        <a href="/about" class="thm-btn main-slider__btn">Learn More</a>
                                         <div class="main-slider-arrow">
                                             <img src="website/images/shapes/main-slider-shape-1.png" class="float-bob-x"
                                                 alt="">
@@ -78,35 +76,7 @@
                     </div>
                     <!--End Swiper Slide Single-->
 
-                    <!--Start Swiper Slide Single-->
-                    <div class="swiper-slide">
-                        <div class="image-layer"
-                            style="background-image: url(website/images/backgrounds/main-slider-1-3.jpg);"></div>
-                        <div class="main-slider-shape-1"></div>
-                        <div class="main-slider-shape-2"></div>
-                        <div class="main-slider-shape-3 zoominout"></div>
-                        <div class="main-slider-shape-4 zoominout-2"></div>
-                        <div class="main-slider-shape-5">
-                            <img src="website/images/shapes/main-slider-shape-5.png" alt="">
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-7">
-                                    <div class="main-slider__content">
-                                        <h2>Give the <span>Poor</span> Help <br> for Families.</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum Fasts by <br> injected
-                                            humour, or randomised words which... </p>
-                                        <a href="about.html" class="thm-btn main-slider__btn">Leran More</a>
-                                        <div class="main-slider-arrow">
-                                            <img src="website/images/shapes/main-slider-shape-1.png" class="float-bob-x"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Swiper Slide Single-->
+                   
 
                 </div>
 
@@ -140,10 +110,9 @@
                                 <div class="feature-one__icon">
                                     <span class="icon-donation-1"></span>
                                 </div>
-                                <h3 class="feature-one__title"><a href="about.html">Implest and Quickest</a></h3>
+                                <h3 class="feature-one__title"><a href="/donations/donate">Donations</a></h3>
                             </div>
-                            <p class="feature-one__text">While building out a new website you
-                                literally no idea of where to start.</p>
+                            <p class="feature-one__text">upporting children through our programmes goes a longer way to giving them a better future.</p>
                         </div>
                     </div>
 
@@ -154,10 +123,9 @@
                                 <div class="feature-one__icon">
                                     <span class="icon-heart"></span>
                                 </div>
-                                <h3 class="feature-one__title"><a href="about.html">Community of Poor</a></h3>
+                                <h3 class="feature-one__title"><a href="about.html">Testimonies/ Fundraisers </a></h3>
                             </div>
-                            <p class="feature-one__text">While building out a new website you
-                                literally no idea of where to start.</p>
+                            <p class="feature-one__text">The smallest support comes from you and it goes a long way starting here!</p>
                         </div>
                     </div>
 
@@ -170,8 +138,7 @@
                                 </div>
                                 <h3 class="feature-one__title"><a href="about.html">Children of Helps</a></h3>
                             </div>
-                            <p class="feature-one__text">While building out a new website you
-                                literally no idea of where to start.</p>
+                            <p class="feature-one__text">The future of Tomorrow</p>
                         </div>
                     </div>
 
@@ -202,11 +169,10 @@
                             <div class="about-one__right-content">
                                 <div class="section-title text-left">
                                     <span class="section-title__tagline">About Us</span>
-                                    <h2 class="section-title__title">We Can Save More Lifes With Your Helping Hand.</h2>
+                                    <h2 class="section-title__title">ONLINE ORPHANAGE ADOPTION SYSTEM (OOAS)</h2>
                                 </div>
-                                <p class="about-one__text">Lorem ipsum is simply free text dolor sit amet,
-                                    consecteturadipisicing elit sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua lonm andhn.</p>
+                                <p class="about-one__text">OOAS educates families about foster care and adoption and gives child welfare professionals information 
+                                    and support to help them improve their services. We also maintain the nation’s only federally funded photolisting service that connects waiting children with families.</p>
                                 <ul class="list-unstyled about-one__points">
                                     <li>
                                         <div class="icon">
@@ -231,16 +197,16 @@
                                 </ul>
                                 <div class="about-one__bottom-video-box">
                                     <div class="about-one__btn-box">
-                                        <a href="about.html" class="thm-btn about-one__btn">About More</a>
+                                        <a href="/about" class="thm-btn about-one__btn">About More</a>
                                     </div>
-                                    <div class="about-one__video-link">
+                                    {{-- <div class="about-one__video-link">
                                         <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
                                             <div class="about-one__video-icon">
                                                 <span class="fa fa-play"></span>
                                                 <i class="ripple"></i>
                                             </div>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -250,8 +216,7 @@
         </section>
         <!--About One End-->
 
-      
-
+     
 
         <!--Support Us Start-->
         <section class="support-us">
@@ -259,34 +224,43 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6 col-lg-7">
+                    <div class="col-xl-8 col-lg-8">
                         <div class="support-us__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                             <div class="support-us__content-box">
                                 <h3 class="support-us__title">Support Us</h3>
-                                <p class="support-us__text">Lorem ipsum dolor sit amet, consectetur nod adipisicing elit
-                                    sed do eiusmod tempor</p>
-                                <form id="support-us__donate-form" name="donate_form" action="#" method="post">
+                                <p class="support-us__text">Every child deserves a happy and healthy childhood and the opportunity to build a brighter future.
+                                    Your support provides access to education, 
+                                    protection of protection, nutrition of nutritious meals and the chance to build a secure future</p>
+                                <form id="support-us__donate-form" name="donate_form" action="/donations" method="post">
+                                    @csrf
+                                    
+                                        <input type="hidden" id="amtog" 
+                                            name="amount" />
+                                            <input type="hidden" id="amtog" 
+                                            name="currency" value="USD"/>
+                                            <input type="hidden" id="amtog" 
+                                            name="type" value="Individual" />
                                     <div class="custon-box">
-                                        <input type="text" id="donate-amount-5" placeholder="Custom"
-                                            name="donate-amount" />
+                                        <input type="text"  id="donate-amount-5" placeholder="Custom"
+                                             onkeyup="custom()"/>
                                         <div class="icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></div>
                                     </div>
                                     <ul class="list-unstyled support-us__donate-form-select-box">
                                         <li>
-                                            <input type="radio" id="donate-amount-1" name="donate-amount" />
+                                            <input type="radio" id="donate-amount-1"  onclick="setAmount(25)"/>
                                             <label for="donate-amount-1" data-amount="25">$25</label>
                                         </li>
                                         <li>
-                                            <input type="radio" id="donate-amount-2" name="donate-amount"
-                                                checked="checked" />
+                                            <input type="radio" id="donate-amount-2" 
+                                                checked="checked" onclick="setAmount(50)"/>
                                             <label for="donate-amount-2" data-amount="50">$50</label>
                                         </li>
                                         <li>
-                                            <input type="radio" id="donate-amount-3" name="donate-amount" />
+                                            <input type="radio" id="donate-amount-3"  onclick="setAmount(100)"/>
                                             <label for="donate-amount-3" data-amount="100">$100</label>
                                         </li>
                                         <li>
-                                            <input type="radio" id="donate-amount-4" name="donate-amount" />
+                                            <input type="radio" id="donate-amount-4"  onclick="setAmount(500)" />
                                             <label for="donate-amount-4" data-amount="500">$500</label>
                                         </li>
                                     </ul>
@@ -297,7 +271,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-5">
+
+                    <script>
+                        const amtog=document.getElementById('amtog'),
+                              cust=document.getElementById('donate-amount-5')
+                        
+                        const custom=()=>{
+                            amtog.value= cust.value
+                        }
+
+                        const setAmount=(amt)=>{                            
+                            amtog.value= amt
+                        }
+                        setAmount(50)                        
+                    </script>
+
+
+                    <div class="col-xl-4 col-lg-4">
                         <div class="support-us__right">
                             <div class="support-us__right-content">
                                 <h3 class="support-us__right-content-title">10 Surgeons <br> 22 Healed</h3>
@@ -441,8 +431,7 @@
                                         <p> <span class="icon-calendar"></span> Nov 09 2022</p>
                                     </div>
                                 </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">will provide an ats resume
-                                        writing and Blog. </a></h3>
+                                <h3 class="blog-one__title"><a href="blog-details.html">What are adverse childhood experiences?</a></h3>
                                 <p class="blog-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore aliqu</p>
                             </div>

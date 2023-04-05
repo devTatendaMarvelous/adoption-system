@@ -16,4 +16,8 @@ class Survey extends Model
            'date_completed',
             'race',
     ];
+    public function families()
+    {
+        return $this->belongsTO(Family::class,'family_id');
+    }
 }

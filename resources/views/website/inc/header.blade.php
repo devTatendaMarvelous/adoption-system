@@ -50,39 +50,12 @@
             <div class="main-header__top clearfix">
                 <div class="container clearfix">
                     <div class="main-header__top-inner clearfix">
-                        <div class="main-header__top-left">
-                            <ul class="list-unstyled main-header__top-address">
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-call"></span>
-                                    </div>
-                                    <div class="text">
-                                        <p><a href="tel:5204654544">+5204654544</a></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-envelope"></span>
-                                    </div>
-                                    <div class="text">
-                                        <p><a href="mailto:demo@example.com">demo@example.com</a></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-place"></span>
-                                    </div>
-                                    <div class="text">
-                                        <p>24/21, 2nd Rangpur, Sapla</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                       
                         <div class="main-header__top-right">
                             <ul class="list-unstyled main-header__top-right-content">
-                                <li><a href="#">Login</a></li>
-                                <li><a href="#">Help You</a></li>
-                                <li><a href="#" class="search-toggler"> <i class="fa fa-search"></i> Search</a></li>
+                                <li><a href="{{ route('login') }}">Login</a></li>
+                                
+                                
                             </ul>
                         </div>
                     </div>
@@ -92,8 +65,12 @@
                 <div class="container clearfix">
                     <div class="main-menu-wrapper clearfix">
                         <div class="main-menu-wrapper__left">
-                            <div class="main-menu-wrapper__logo">
-                                <a href="index-2.html"><img src="website/images/resources/logo-1.png" alt=""></a>
+                            <div class="main-menu-wrapper__logo ">
+                                <div class="row">
+                                    <a class="col-2" href="/"><img src="website/images/resources/logo-1.png" alt=""></a> 
+                                    <h3 class="col-10"><b> ORPHANAGE ADOPTION SYSTEM</b></h3>
+                                    {{-- <a class="col-3" href="/"><img src="website/images/resources/logo-1.png" alt=""></a> <h3 class="col-6">OOAS</h3> --}}
+                                </div>
                             </div>
                         </div>
                         <div class="main-menu-wrapper__right">
@@ -114,7 +91,7 @@
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
-                            <a href="donate-now.html" class="thm-btn main-header__btn">Donate Now</a>
+                            <a href="/donations/donate" class="thm-btn main-header__btn">Donate Now</a>
                         </div>
                     </div>
                 </div>

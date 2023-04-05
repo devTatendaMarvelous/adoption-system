@@ -12,7 +12,7 @@
 
 
 </style>
-<form id="regForm" action="{{ route('families.store') }}" method="POST" class="col-12">
+<form id="regForm" action="{{ route('families.store') }}" method="POST" class="col-12" enctype="multipart/form-data">
     @csrf
 
 <h1>Family Register:</h1>
@@ -168,6 +168,11 @@
               </select>
               
         </div>
+        <div class="col-md-3">
+            Reference Letter
+               <input class="form-control " name="ref_letter" type="file" >
+        </div>
+        
     </div>
 
 

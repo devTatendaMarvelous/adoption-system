@@ -51,10 +51,13 @@ public function search(Request $request)
             'license'=>'required',
             'date_completed'=>'required',
             'race'=>'required',
+            'ref_letter'=>'required',
 
      ]);
 
-
+     
+     $family['ref_letter']=$request->file('ref_letter')->store('famRefs','public');
+        
      $fam=Family::create($family);
 
      $family['name']=$family['rep_name'];
@@ -90,6 +93,7 @@ public function search(Request $request)
             'surveys.race',
       ]);
       
+      
       return view('families.show')->with('family',$family[0]);
    }
     public function update(Request $request,$id)
@@ -112,12 +116,7 @@ public function search(Request $request)
       return redirect('families');
    }
     public function destroy($id){
-
-
-
         $family=Family::find($id);
-
-
         $family->delete();
         Toastr::success('family deleted successfully 🤗','Success');
         return redirect('families');

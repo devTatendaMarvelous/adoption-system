@@ -54,8 +54,7 @@ class DonationController extends Controller
     }
 
     public function store(Request $request)
-    {
-        
+    {        
         
         $donation=$request->validate([
             'amount'=>'required',

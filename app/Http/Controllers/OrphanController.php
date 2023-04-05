@@ -86,16 +86,20 @@ public function convertDate($dt)
         $transRow = true;
         while (($data = fgetcsv($csvData, 555, ',')) !== false) {
             if (!$transRow) {
-                
-                Orphan::create([
-                    'orphan_name' => $data['0'],
+                try{
 
-                    
-                    'dob' =>  $this->convertDate($data['1']),
-                    'gender' => $data['2'],
-                    'birth_id' => $data['3'],
-                    'description' => $data['4'],
-                ]);
+                    Orphan::create([
+                        'orphan_name' => $data['0'],
+    
+                        
+                        'dob' =>  $this->convertDate($data['1']),
+                        'gender' => $data['2'],
+                        'birth_id' => $data['3'],
+                        'description' => $data['4'],
+                    ]);
+                }catch(Exception $e){
+                    dd($e->getMessage());
+                }
             }
             $transRow = false;
         }

@@ -3,7 +3,11 @@
 
 <div class="header-left">
 <a href="{{ route('home') }}" class="logo">
-<img src="{{ asset('assets/img/logo.png')}}" alt="Logo">
+     <div class="row p-2 " style="margin-top:-15px">
+          <a class="col-2" href="/"><img src="website/images/resources/logo-1.png" alt=""></a> 
+          <h6 class="col-10 text-white "><b> ORPHANAGE ADOPTION SYSTEM</b></h6>
+     </div>
+{{-- <img src="{{ asset('assets/img/logo.png')}}" alt="Logo"> --}}
 </a>
 
 </div>
@@ -27,16 +31,19 @@
 
 <li class="nav-item dropdown has-arrow">
 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-<span class="user-img"><img class="rounded-circle" src="{{ asset('assets/img/profiles/avatar-01.jpg')}}" width="31" alt="Ryan Taylor"></span>
+<span class="user-img"><img class="rounded-circle" src="{{Auth::user()->photo?  asset('storage/'.Auth::user()->photo):'/noimage.png'  }}" width="31" alt="Ryan Taylor"></span>
 </a>
 <div class="dropdown-menu">
 <div class="user-header">
 <div class="avatar avatar-sm">
-<img src="{{ asset('assets/img/profiles/avatar-01.jpg')}}" alt="User Image" class="avatar-img rounded-circle">
+<img src="{{Auth::user()->photo?  asset('storage/'.Auth::user()->photo):'/noimage.png' }}" alt="User Image" class="avatar-img rounded-circle">
 </div>
 <div class="user-text">
 <h6>{{ Auth::user()->name }}</h6>
 <p class="text-muted mb-0">{{ Auth::user()->role }}</p>
+</div>
+<div class="user-text">
+<h6><a href="{{ route('user.edit') }}">Profile</a></h6>
 </div>
 </div>
 <form action="{{ route('logout') }}" method="POST">

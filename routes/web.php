@@ -48,8 +48,12 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
         Route::get('/orphans/{id}', 'destroy')->name('orphans.delete');
         Route::get('/orphans/{id}/show', 'show')->name('orphans.show');
     });
+    Route::controller(UserController::class )->group(function(){
+     Route::get('/user', 'edit')->name('user.edit');
+     Route::post('/user', 'update')->name('user.update');
+    });
 
-
+    
     // ====================================================================================================================================
 
       Route::controller(DonationController::class)->group(function(){

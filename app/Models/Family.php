@@ -17,5 +17,9 @@ class Family extends Model
             'email',
             'occupation',
             'relationship_status',
+            'ref_letter',
     ];
+    public function surveys(){
+        return $this->hasOne(Survey::class);
+    }
 }

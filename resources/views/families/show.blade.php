@@ -16,7 +16,7 @@
 
 <div class="row">
 <div class="col-md-12">
-<div class="profile-header">
+{{-- <div class="profile-header">
 <div class="row align-items-center">
 <div class="col-auto profile-image">
 <a href="#">
@@ -32,7 +32,7 @@
 </div>
 
 </div>
-</div>
+</div> --}}
 
 <div class="tab-content profile-tab-cont">
 
@@ -46,25 +46,74 @@
 <span>Personal Details</span>
 {{-- <a class="edit-link" data-toggle="modal" href="#edit_personal_details"><i class="fa fa-edit mr-1"></i>Edit</a> --}}
 </h5>
+
 <div class="row">
-<p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Name</p>
-<p class="col-sm-9">{{ $family->family_name }}</p>
-</div>
-<div class="row">
-<p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Date of Birth</p>
-<p class="col-sm-9">{{ $family->dob }}</p>
-</div>
-<div class="row">
-<p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Gender</p>
-<p class="col-sm-9">{{ $family->gender }}</p>
-</div>
-<div class="row">
-<p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Birth Certificate Number</p>
-<p class="col-sm-9">{{ $family->id }}</p>
-</div>
-<div class="row">
-<p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Status</p>
-<p class="col-sm-9">{{ $family->status }}</p>
+     <div class="col-md-4">
+          
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Name</p>
+          <p class="col-sm-9">{{ $family->rep_name }}</p>
+          </div>
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Date of Birth</p>
+          <p class="col-sm-9">{{ $family->dob }}</p>
+          </div>
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Gender</p>
+          <p class="col-sm-9">{{ $family->gender }}</p>
+          </div>
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">ID Number</p>
+          <p class="col-sm-9">{{ $family->id_num }}</p>
+          </div>
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Email</p>
+          <p class="col-sm-9">{{ $family->email }}</p>
+          </div>
+     </div>
+     <div class="col-md-4">
+          
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Language</p>
+          <p class="col-sm-9">{{ $family->language }}</p>
+          </div>
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Occupation</p>
+          <p class="col-sm-9">{{ $family->occupation }}</p>
+          </div>
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Marrital Status</p>
+          <p class="col-sm-9">{{ $family->relationship_status }}</p>
+          </div>
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Race</p>
+          <p class="col-sm-9">{{ $family->race }}</p>
+          </div>
+          
+     </div>
+     <div class="col-md-4">
+          
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Taken Foster Training?</p>
+          <p class="col-sm-9">{{ $family->foster_training===1? 'Yes':'No' }}</p>
+        
+          </div>
+          @if($family->foster_training===1)
+               <div class="row">
+               <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Date Completed</p>
+               <p class="col-sm-9">{{ $family->date_completed}}</p>
+               </div>
+          @endif
+          
+          <div class="row">
+          <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Been a Foster Parent?</p>
+          <p class="col-sm-9">{{ $family->foster_parent===1? 'Yes':'No' }}</p>
+          </div>
+          <div class="row">
+          
+          <p class="col-sm-9"><a class="btn btn-primary" href="{{ asset('storage/'.$family->ref_letter)}}">View Reference Letter</a></p>
+          </div>
+     </div>
 </div>
 
 
