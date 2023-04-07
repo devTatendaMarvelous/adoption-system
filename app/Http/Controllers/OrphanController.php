@@ -90,8 +90,6 @@ public function convertDate($dt)
 
                     Orphan::create([
                         'orphan_name' => $data['0'],
-    
-                        
                         'dob' =>  $this->convertDate($data['1']),
                         'gender' => $data['2'],
                         'birth_id' => $data['3'],

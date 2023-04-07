@@ -35,7 +35,7 @@
 </head> </head>
 <body>
 
-<div class="main-wrapper login-body">
+<div class="main-wrapper login-body" style="background-image: url('{{ asset('bg.jpeg') }}'); background-size:cover;">
 <div class="login-wrapper">
 <div class="container">
 <div class="loginbox">

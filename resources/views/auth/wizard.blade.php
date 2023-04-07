@@ -164,7 +164,7 @@
                     <option value="Married">Relationship Status</option>
                     <option value="Married">Married</option>
                     <option value="Single">Single</option>
-                    <option value="Devorced">Devorced</option>
+                    <option value="Devorced">Divorced</option>
               </select>
               
         </div>

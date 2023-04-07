@@ -432,8 +432,11 @@
                                     </div>
                                 </div>
                                 <h3 class="blog-one__title"><a href="blog-details.html">What are adverse childhood experiences?</a></h3>
-                                <p class="blog-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore aliqu</p>
+                                <p class="blog-one__text">Adverse childhood experiences, commonly known as ACEs, happen before you turn 18. They include things like neglect, abuse, and experiencing the divorce of parents.</p>
+                                <p class="blog-one__text">ACEs can shape people’s lives. If someone has a high ACE score, they’re more likely to suffer from things like heart problems and substance misuse, as the CDC explains on their website. These experiences can also affect mental health.
+Notably, foster care is an “expanded ACE,” according to a research study in PubMed. There are ten main ACEs. Outside of that, there are expanded traumatic experiences. Foster care is one of these because it is traumatic for a child to be removed from their home. When they are placed in the child welfare system, children and youth see many people they don’t know. That’s scary for anyone and can be very traumatic for a child.
+So, foster and adoptive parents should understand that their child has experienced the potential adverse experience of being in foster care and may have experienced others as well. But there are ways they can help!</p>
+
                             </div>
                         </div>
                     </div>
@@ -455,10 +458,11 @@
                                         <p> <span class="icon-calendar"></span> Nov 09 2022</p>
                                     </div>
                                 </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Leverage agile frameworks to
-                                        provide</a></h3>
-                                <p class="blog-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore aliqu</p>
+                                <h3 class="blog-one__title"><a href="blog-details.html">Transracial parenting resources  </a></h3>
+                                <p class="blog-one__text">In OOAS article “Advice to parents adopting a child of another race,” JaeRan Kim—assistant professor in the School of Social Work and Criminal Justice at the University of Washington, Tacoma—writes about her experience being adopted from Korea.
+She shares, “My parents were supportive and open about my adoption, but my Korean culture and recognition of my Asian American identity were not part of my life growing up. Like many people of their era, and unfortunately, still some today, my parents thought that being ‘color-blind’ equated to being non-racist.”
+Are you, like JaeRan Kim’s parents, caring for children or youth of another race or culture? If so, the below resources are for you.
+Most of these books, online resources, and podcasts are specifically for white parents, as the majority of transracial adoptions are of white parents adopting children of color. These resources will help you support your child or youth’s well-being and development of a positive racial and cultural identity./p>
                             </div>
                         </div>
                     </div>
@@ -480,10 +484,17 @@
                                         <p> <span class="icon-calendar"></span> Nov 09 2022</p>
                                     </div>
                                 </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Bring to the table win-win
-                                        survival</a></h3>
-                                <p class="blog-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore aliqu</p>
+                                <h3 class="blog-one__title"><a href="blog-details.html">Adopted son inspires his parents</a></h3>
+                                <ul>
+                                    <li>A Vermont couple adopted their son from foster care when he was three.</li>
+                                    
+    • As first-time parents, they found a support network and took every opportunity to learn about trauma.
+    • Their now 13-year-old son is their greatest joy and inspires songs written by his mother.
+                                </ul>
+                                <p class="blog-one__text">    
+Lissa Schneckenburger smiles as she recalls how she and her husband, Corey DiMario, took the deep dive into being foster parents ten years ago.
+“We were first-time parents in our early 30s,” she explains. “We’d never done any parenting before, and we were just thrown into everything—working with the child welfare system and working with a child with high needs and who was a victim of trauma.”
+The last ten years of raising their son have been filled with immense joy. The family has also grown from challenges. During these years, the Vermont State couple has addressed their child’s personal, emotional, and physical needs. They’ve also dealt with issues brought on by the Covid-19 pandemic.</p>
                             </div>
                         </div>
                     </div>

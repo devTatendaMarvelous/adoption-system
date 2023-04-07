@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || Sopot || Sopot HTML Template For Charity</title>
+    <title>ORPHANAGE ADOPTION SYSTEM</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="website/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="website/images/favicons/favicon-32x32.png" />
@@ -69,7 +69,6 @@
                                 <div class="row">
                                     <a class="col-2" href="/"><img src="website/images/resources/logo-1.png" alt=""></a> 
                                     <h3 class="col-10"><b> ORPHANAGE ADOPTION SYSTEM</b></h3>
-                                    {{-- <a class="col-3" href="/"><img src="website/images/resources/logo-1.png" alt=""></a> <h3 class="col-6">OOAS</h3> --}}
                                 </div>
                             </div>
                         </div>
@@ -91,6 +90,7 @@
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
+                            <a href="/donations/donate" class="thm-btn main-header__btn">Donate Now</a>
                             <a href="/donations/donate" class="thm-btn main-header__btn">Donate Now</a>
                         </div>
                     </div>

@@ -49,7 +49,7 @@ class Notifications extends Mailable
 
     {
 
-        return $this->subject('Adoption Management System') ->view('mail');;
+        return $this->subject('Orphanage Adoption System') ->view('mail');;
 
     }
 }
