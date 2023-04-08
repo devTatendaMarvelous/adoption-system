@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('surveys', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('family_id')->references('id')->on('families');
+            $table->integer('family_id');
             $table->integer('foster_training')->default(0);
             $table->integer('foster_parent')->default(0);
             $table->integer('license')->default(0);

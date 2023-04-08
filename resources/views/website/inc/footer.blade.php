@@ -11,8 +11,8 @@
                                     <a href="index-2.html"><img src="website/images/resources/footer-logo.png" alt=""></a>
                                 </div>
                                 <p class="footer-widget-one__about-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis lorem augue, at
-                                    dapibus quam aliquet ex...
+                                    Every child deserves a happy and healthy childhood and the opportunity to build a brighter future.
+Your support provides access to education, protection of protection, nutrition of nutritious meals and the chance to build a secure future.
                                 </p>
                                 <ul class="list-unstyled footer-widget-one__list">
                                     <li>
@@ -160,9 +160,7 @@
                                     }
                                 }'>
                                     <div class="footer-widget-one__twitter-feed-single">
-                                        <p class="footer-widget-one__twitter-feed-text">Lorem ipsum is simply free text
-                                            dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor
-                                            incididunt <a href="#">http://t.twitter.com</a></p>
+                                        <p class="footer-widget-one__twitter-feed-text">L“We were first-time parents in our early 30s,” she explains. “We’d never done any parenting before, and we were just thrown into everything—working with the child welfare system and working with a child with high needs and who was a victim of trauma.” <a href="#">http://t.twitter.com</a></p>
                                         <div class="footer-widget-one__twitter-feed-bottom">
                                             <div class="footer-widget-one__twitter-feed-icon">
                                                 <span class="fab fa-twitter"></span>
@@ -175,9 +173,7 @@
                                         </div>
                                     </div>
                                     <div class="footer-widget-one__twitter-feed-single">
-                                        <p class="footer-widget-one__twitter-feed-text">Lorem ipsum is simply free text
-                                            dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor
-                                            incididunt <a href="#">http://t.twitter.com</a></p>
+                                        <p class="footer-widget-one__twitter-feed-text">Adverse childhood experiences, commonly known as ACEs, happen before you turn 18. They include things like neglect, abuse, and experiencing the divorce of parents. <a href="#">http://t.twitter.com</a></p>
                                         <div class="footer-widget-one__twitter-feed-bottom">
                                             <div class="footer-widget-one__twitter-feed-icon">
                                                 <span class="fab fa-twitter"></span>
@@ -190,9 +186,7 @@
                                         </div>
                                     </div>
                                     <div class="footer-widget-one__twitter-feed-single">
-                                        <p class="footer-widget-one__twitter-feed-text">Lorem ipsum is simply free text
-                                            dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor
-                                            incididunt <a href="#">http://t.twitter.com</a></p>
+                                        <p class="footer-widget-one__twitter-feed-text">The last ten years of raising their son have been filled with immense joy. The family has also grown from challenges. During these years, the Vermont State couple has addressed their child’s personal, emotional, and physical needs. They’ve also dealt with issues brought on by the Covid-19 pandemic.<a href="#">http://t.twitter.com</a></p>
                                         <div class="footer-widget-one__twitter-feed-bottom">
                                             <div class="footer-widget-one__twitter-feed-icon">
                                                 <span class="fab fa-twitter"></span>
@@ -213,8 +207,7 @@
             <div class="site-footer__bottom">
                 <div class="container">
                     <div class="site-footer__bottom-inner">
-                        <p class="site-footer__bottom-text">© 2022 Copyright by <a
-                                href="https://themeforest.net/user/unicktheme">unicktheme</a></p>
+                        <p class="site-footer__bottom-text">© 2023 Copyright by </p>
                     </div>
                 </div>
             </div>
@@ -263,21 +256,7 @@
     </div>
     <!-- /.mobile-nav__wrapper -->
 
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="icon-search-interface-symbol"></i>
-                </button>
-            </form>
-        </div>
-        <!-- /.search-popup__content -->
-    </div>
-    <!-- /.search-popup -->
+
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 

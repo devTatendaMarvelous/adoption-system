@@ -15,20 +15,19 @@
             </div>
         </section>
         <!--Page Header End-->
-
-        <!--About One Start-->
-        <section class="about-one about-three">
+<!--About One Start-->
+        <section class="about-one">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="about-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                             <div class="about-one__img-box">
                                 <div class="about-one__img">
-                                    <img src="{{ asset('website/images/resources/about-one-img-1.jpg')}}" alt="">
+                                    <img src="website/images/resources/about-one-img-1.jpg" alt="">
                                 </div>
                                 <div class="about-one__small-img wow zoomIn animated animated" data-wow-delay="500ms"
                                     data-wow-duration="2500ms">
-                                    <img src="{{ asset('website/images/resources/about-one-small-img.jpg')}}" alt="">
+                                    <img src="website/images/resources/about-one-small-img.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -38,20 +37,19 @@
                             <div class="about-one__right-content">
                                 <div class="section-title text-left">
                                     <span class="section-title__tagline">About Us</span>
-                                    <h2 class="section-title__title">We Can Save More Lifes With Your Helping Hand.</h2>
+                                    <h2 class="section-title__title">ONLINE ORPHANAGE ADOPTION SYSTEM (OOAS)</h2>
                                 </div>
-                                <p class="about-one__text">Lorem ipsum is simply free text dolor sit amet,
-                                    consecteturadipisicing elit sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua lonm andhn.</p>
+                                <p class="about-one__text mb-4">OOAS educates families about foster care and adoption and gives child welfare professionals information 
+                                    and support to help them improve their services. We also maintain the nation’s only federally funded photolisting service that connects waiting children with families.</p>
+                                    <h5>Our mission:</h5>
                                 <ul class="list-unstyled about-one__points">
                                     <li>
                                         <div class="icon">
                                             <span class="icon-comment"></span>
                                         </div>
                                         <div class="text">
-                                            <h4>It service for business network.</h4>
-                                            <p>ill give you a complete account of the system, and
-                                                expound the actual teachings...</p>
+                                            <h4>Raise public awareness about the need for foster and adoptive families for children in the public child welfare system</h4>
+                                            
                                         </div>
                                     </li>
                                     <li>
@@ -59,26 +57,125 @@
                                             <span class="icon-comment"></span>
                                         </div>
                                         <div class="text">
-                                            <h4>Business success rate solving.</h4>
-                                            <p>ill give you a complete account of the system, and
-                                                expound the actual teachings...</p>
+                                            <h4>Assist Zimbabwean states, territories, and tribes to recruit, engage, develop and support foster and adoptive families</h4>
+                                           
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="about-one__bottom-video-box">
-                                    <div class="about-one__btn-box">
-                                        <a href="about.html" class="thm-btn about-one__btn">About More</a>
-                                    </div>
-                                    <div class="about-one__video-link">
-                                        <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                            <div class="about-one__video-icon">
-                                                <span class="fa fa-play"></span>
-                                                <i class="ripple"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                               
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                     <div class="col-12">
+                        <div class="about-one__right">
+                            <div class="about-one__right-content">
+                                <div class="section-title text-center">
+                                    <span class="section-title__tagline text-center">Serving families</span>
+                                    {{-- <h2 class="section-title__title">ONLINE ORPHANAGE ADOPTION SYSTEM (OOAS)</h2> --}}
+                                </div>
+                                <p class="about-one__text mb-4">We help families with the adoption process—every step of the way:</p>
+                                    
+                                <ul class="list-unstyled about-one__points">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-comment"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h4>We answer questions from families who are exploring foster care and adoption online and over the phone.</h4>
+                                            
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-comment"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h4>We help families who are approved to adopt search for children on our national photolisting and make inquiries directly to the children’s caseworkers.</h4>
+                                           
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-comment"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h4>We connect a community of more than 260,000 families online.</h4>
+                                           
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div>
+                            <div class="about-one__right-content">
+                                <div class="section-title text-center">
+                                    <span class="section-title__tagline text-center">Raising awareness of teens in foster care</span>
+                                    {{-- <h2 class="section-title__title">ONLINE ORPHANAGE ADOPTION SYSTEM (OOAS)</h2> --}}
+                                </div>
+                                <p class="about-one__text mb-4">Through a partnership with the Ad Council, we produce a public service campaign to raise awareness of adoption from foster care. Now in its sixteenth year, the theme of the current campaign is “You can’t imagine the reward” and highlights the many reasons to adopt a teen.</p>
+                              
+                               
+                            </div>
+
+                            <div class="about-one__right-content">
+                                <div class="section-title text-center">
+                                    <span class="section-title__tagline text-center">Frequently asked questions about OOAS</span>
+                                    {{-- <h2 class="section-title__title">ONLINE ORPHANAGE ADOPTION SYSTEM (OOAS)</h2> --}}
+                                </div>
+                                <p class="about-one__text mb-4">Every day, OOAS staff respond to hundreds of questions from families and professionals who call our adoption and foster care resource specialists or visit our Facebook page. Below are responses to a few of the frequently asked questions.</p>
+                               <ul class="list-unstyled about-one__points">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-comment"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Is OOAS an adoption agency?</h4>
+                                            <p class="about-one__text mb-4">No. We work on behalf of states, territories, tribes, and their private agency partners to help connect families interested in adoption and foster care with resources and the agencies responsible for finding foster and adoptive families for children in their care.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-comment"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Do you charge for your services?</h4>
+                                            <p class="about-one__text mb-4">Never. OOAS is federally funded through a project created to increase the number of children in foster care who are placed into safe, permanent families. Our services to families and professionals are offered free of charge.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-comment"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Whom do I call with questions about adoption?</h4>
+                                            <p class="about-one__text mb-4">You can call our team of adoption and foster care specialists Monday–Friday, 9 a.m.–5 p.m. Phone Number -/ Email
+ They are also available through our online chat feature weekdays, 9 a.m.–4 p.m</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-comment"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Things to do next:</h4>
+                                            <ul>
+                                                <li>   Visit our blog to read stories of families who have adopted children from foster care—many with the help of the Online Orphanage Adoption System.
+                                                </li>
+                                                <li>
+                                                    Learn more about the children who are in foster care.
+                                                </li>
+                                                <li>
+    Visit our Facebook page, a vibrant community of more than 200,000 families sharing their questions and experiences.</li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -134,13 +231,6 @@
                                 <span class="counter-one__letter">+</span>
                                 <p class="counter-one__text">Pioneer throughs</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="counter-one__btn-box text-center">
-                            <a href="about.html" class="thm-btn counter-one__btn">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -242,9 +332,8 @@
                             <span class="section-title__tagline">Our Skill Now</span>
                             <h2 class="section-title__title">We Are To Provide Years Of Skill Now.</h2>
                         </div>
-                        <p class="skill-one__text">Lorem ipsum is simply free text dolor sit amet, consectetur
-                            adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lonm
-                            andhn.</p>
+                        <p class="skill-one__text">OOAS is federally funded through a project created to increase the number of children in foster care who are placed into safe, permanent families. Our services to families and professionals are offered free of charge.
+</p>
                         <div class="progress-levels">
                             <!--Skill Box-->
                             <div class="progress-box">
@@ -279,7 +368,7 @@
                             <!--Skill Box-->
                             <div class="progress-box last-child">
                                 <div class="inner count-box">
-                                    <div class="text">Consultancy</div>
+                                    <div class="text">Adopting</div>
                                     <div class="bar">
                                         <div class="bar-innner">
                                             <div class="skill-percent">
@@ -366,197 +455,7 @@
         </section>
         <!--Team One End-->
 
-        <!--video One Start-->
-        <section class="video-one">
-            <div class="video-one__content-box">
-                <div class="video-one-shape sauare-mover"></div>
-                <div class="video-one-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                    style="background-image: url({{ asset('website/images/backgrounds/video-one-bg.jpg')}});"></div>
-                <div class="container">
-                    <div class="video-one__inner">
-                        <div class="video-one__video-link">
-                            <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                <div class="video-one__video-icon">
-                                    <span class="fa fa-play"></span>
-                                    <i class="ripple"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="video-one__title">Welcome To Our We Donation <br> Video Poor.</h3>
-                        <p class="video-one__text">If you are going to use a passage of Lorem Ipsum, you <br> need to be
-                            sure there isn't anything </p>
-                        <a href="about.html" class="thm-btn video-one__btn">Video More</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--video One End-->
+        
 
-        <!--Testimonial One End-->
-        <section class="testimonial-one">
-            <div class="container">
-                <div class="owl-carousel owl-theme thm-owl__carousel testimonial-one__carousel" data-owl-options='{
-                    "loop": true,
-                    "autoplay": true,
-                    "margin": 30,
-                    "nav": false,
-                    "dots": false,
-                    "smartSpeed": 500,
-                    "autoplayTimeout": 10000,
-                    "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
-                    "responsive": {
-                        "0": {
-                            "items": 1
-                        },
-                        "768": {
-                            "items": 2
-                        },
-                        "991": {
-                            "items": 3
-                        },
-                        "1200": {
-                            "items": 3
-                        }
-                    }
-                }'>
-                    <!--Testimonial One single-->
-                    <div class="testimonial-one__single">
-                        <div class="testimonial-one__img">
-                            <img src="{{ asset('website/images/testimonial/testimonial-1-1.jpg')}}" alt="">
-                            <div class="testimonial-one__quote">
-                                <span class="fas fa-quote-left"></span>
-                            </div>
-                        </div>
-                        <p class="testimonial-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore aliqua.</p>
-                        <div class="testimonial-one__client-info">
-                            <h4 class="testimonial-one__client-name">Karom Boros</h4>
-                            <span class="testimonial-one__client-title">Founder</span>
-                        </div>
-                    </div>
-
-                    <!--Testimonial One single-->
-                    <div class="testimonial-one__single">
-                        <div class="testimonial-one__img">
-                            <img src="{{ asset('website/images/testimonial/testimonial-1-2.jpg')}}" alt="">
-                            <div class="testimonial-one__quote">
-                                <span class="fas fa-quote-left"></span>
-                            </div>
-                        </div>
-                        <p class="testimonial-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore aliqua.</p>
-                        <div class="testimonial-one__client-info">
-                            <h4 class="testimonial-one__client-name">Sumi Parvin</h4>
-                            <span class="testimonial-one__client-title">Volunteer</span>
-                        </div>
-                    </div>
-
-                    <!--Testimonial One single-->
-                    <div class="testimonial-one__single">
-                        <div class="testimonial-one__img">
-                            <img src="{{ asset('website/images/testimonial/testimonial-1-3.jpg')}}" alt="">
-                            <div class="testimonial-one__quote">
-                                <span class="fas fa-quote-left"></span>
-                            </div>
-                        </div>
-                        <p class="testimonial-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore aliqua.</p>
-                        <div class="testimonial-one__client-info">
-                            <h4 class="testimonial-one__client-name">Robi islam</h4>
-                            <span class="testimonial-one__client-title">Manager</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!--Testimonial End End-->
-
-        <!--Blog One Start-->
-        <section class="blog-one">
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Our Blog</span>
-                    <h2 class="section-title__title">Latest News & Update.</h2>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <!--Blog One single-->
-                        <div class="blog-one__single">
-                            <div class="blog-one__img">
-                                <img src="{{ asset('website/images/blog/blog-1-1.jpg')}}" alt="">
-                                <a href="blog-details.html">
-                                    <span class="blog-one__plus"></span>
-                                </a>
-                            </div>
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <div class="blog-one__cat">
-                                        <p>Cyclone</p>
-                                    </div>
-                                    <div class="blgo-one__date">
-                                        <p> <span class="icon-calendar"></span> Nov 09 2022</p>
-                                    </div>
-                                </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">will provide an ats resume
-                                        writing and Blog. </a></h3>
-                                <p class="blog-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore aliqu</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <!--Blog One single-->
-                        <div class="blog-one__single">
-                            <div class="blog-one__img">
-                                <img src="{{ asset('website/images/blog/blog-1-2.jpg')}}" alt="">
-                                <a href="blog-details.html">
-                                    <span class="blog-one__plus"></span>
-                                </a>
-                            </div>
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <div class="blog-one__cat">
-                                        <p>Homeless</p>
-                                    </div>
-                                    <div class="blgo-one__date">
-                                        <p> <span class="icon-calendar"></span> Nov 09 2022</p>
-                                    </div>
-                                </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Leverage agile frameworks to
-                                        provide</a></h3>
-                                <p class="blog-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore aliqu</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <!--Blog One single-->
-                        <div class="blog-one__single">
-                            <div class="blog-one__img">
-                                <img src="{{ asset('website/images/blog/blog-1-3.jpg')}}" alt="">
-                                <a href="blog-details.html">
-                                    <span class="blog-one__plus"></span>
-                                </a>
-                            </div>
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <div class="blog-one__cat">
-                                        <p>Donate</p>
-                                    </div>
-                                    <div class="blgo-one__date">
-                                        <p> <span class="icon-calendar"></span> Nov 09 2022</p>
-                                    </div>
-                                </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Bring to the table win-win
-                                        survival</a></h3>
-                                <p class="blog-one__text">Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore aliqu</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Blog One End-->
+    
 @include('website.inc.footer')

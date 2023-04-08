@@ -142,12 +142,12 @@
                     <label class="form-check-label ml-5">African</label>
             </div> 
             <div class="form-check">
-                    <input type="checkbox" name="race" id=""class="form-check-input"  value="African" >
+                    <input type="checkbox" name="race" id=""class="form-check-input"  value="Asian" >
                     
                     <label class="form-check-label ml-5">Asian</label>
             </div> 
             <div class="form-check">
-                    <input type="checkbox" name="race" id=""class="form-check-input mr-5"  value="African" >
+                    <input type="checkbox" name="race" id=""class="form-check-input mr-5"  value="American" >
                     
                     <label class="form-check-label ml-5" > American</label>
             </div> 
@@ -164,7 +164,7 @@
                     <option value="Married">Relationship Status</option>
                     <option value="Married">Married</option>
                     <option value="Single">Single</option>
-                    <option value="Devorced">Divorced</option>
+                    <option value="Divorced">Divorced</option>
               </select>
               
         </div>

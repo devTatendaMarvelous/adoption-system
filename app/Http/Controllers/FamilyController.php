@@ -118,6 +118,8 @@ public function search(Request $request)
     public function destroy($id){
         $family=Family::find($id);
         $family->delete();
+        $survey=Survey::where('family_id',$id);
+        $survey->delete();
         Toastr::success('family deleted successfully 🤗','Success');
         return redirect('families');
 

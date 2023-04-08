@@ -10,10 +10,9 @@ Route::group(['namespace'=>'App\Http\Controllers'], function() {
         // Route::post('/families/search', 'search')->name('families.search');
         Route::get('/', 'index');
         Route::get('/about', 'about');
-        // Route::post('/families', 'store')->name('families.store');
-        // Route::get('/families/{id}/edit', 'edit')->name('families.edit');
-        // Route::post('/families/{id}', 'update')->name('families.update');
-        // Route::get('/families/{id}', 'destroy')->name('families.delete');
+        Route::get('/contact', 'contact');
+        Route::get('/blog', 'blog');
+        Route::get('/blog/{id}', 'blog');
     });
 });
 

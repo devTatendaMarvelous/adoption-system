@@ -68,7 +68,6 @@
                             <div class="main-menu-wrapper__logo ">
                                 <div class="row">
                                     <a class="col-2" href="/"><img src="website/images/resources/logo-1.png" alt=""></a> 
-                                    <h3 class="col-10"><b> ORPHANAGE ADOPTION SYSTEM</b></h3>
                                 </div>
                             </div>
                         </div>
@@ -80,17 +79,17 @@
                                         <a href="/">Home</a>
                                         
                                     </li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="/about">About</a></li>
                                     
                                     
                                     <li class="">
-                                        <a href="#">Blog</a>
+                                        <a href="/blog">Blog</a>
                                         
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                             </div>
-                            <a href="/donations/donate" class="thm-btn main-header__btn">Donate Now</a>
+                            <a href="/adoptions/adopt" class="thm-btn main-header__btn m-4">Adopt Now</a>
                             <a href="/donations/donate" class="thm-btn main-header__btn">Donate Now</a>
                         </div>
                     </div>

@@ -40,7 +40,7 @@
 <div class="container">
 <div class="loginbox">
 <div class="login-left col-4">
-<img class="img-fluid" src="{{ asset('assets/img/logo.png')}}" alt="Logo">
+<img class="img-fluid" src="{{ asset('website/images/resources/logo-1.png')}}" alt="Logo">
 </div>
 
 <div class="login-right col-md-8">

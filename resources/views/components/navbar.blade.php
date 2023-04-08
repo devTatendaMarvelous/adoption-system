@@ -3,11 +3,10 @@
 
 <div class="header-left">
 <a href="{{ route('home') }}" class="logo">
-     <div class="row p-2 " style="margin-top:-15px">
+     <div class="row p-2 " style="margin-top:-25px; ">
           <a class="col-2" href="/"><img src="website/images/resources/logo-1.png" alt=""></a> 
-          <h6 class="col-10 text-white "><b> ORPHANAGE ADOPTION SYSTEM</b></h6>
+          
      </div>
-{{-- <img src="{{ asset('assets/img/logo.png')}}" alt="Logo"> --}}
 </a>
 
 </div>
