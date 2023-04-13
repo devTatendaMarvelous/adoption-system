@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('adoptions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('family_id')->references('id')->on('families')->onDelete('cascade');
-            $table->foreignId('orphan_id')->references('id')->on('orphans')->onDelete('cascade');
-            $table->string('ref');
+            $table->integer('family_id');
+            
+            $table->integer('orphan_id');
+                        $table->string('ref');
             $table->string('status')->default('Pending');
             $table->timestamps();
         });

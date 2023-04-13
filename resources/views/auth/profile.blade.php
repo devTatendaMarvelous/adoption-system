@@ -53,7 +53,7 @@ Please enter Your Account Birth Number.
 </div>
 <div class="col-md-4 mb-3">
 <label for="validationCustom02">Password</label>
- <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+ <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"autocomplete="current-password" placeholder="Password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

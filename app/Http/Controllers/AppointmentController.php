@@ -96,9 +96,12 @@ class AppointmentController extends Controller
     }
 
 
-    public function destroy(Request $id)
+    public function destroy( $id)
     {
-        Appointment::find($id)->delete();
+     
+        $app=Appointment::find($id);
+    
+        $app->delete();
         Toastr::success('Appointment Deleted 🤗','Success');
         return redirect('appointments');
     }

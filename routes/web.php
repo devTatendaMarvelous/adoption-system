@@ -93,7 +93,7 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
         Route::post('/adoptions', 'store')->name('adoptions.store');
         Route::get('/adoptions/{id}/edit', 'edit')->name('adoptions.edit');
         Route::post('/adoptions/{id}', 'update')->name('adoptions.update');
-        Route::get('/adoptions/{id}', 'destroy')->name('adoptions.delete');
+        Route::get('/adoptions/{id}/delete', 'destroy')->name('adoptions.delete');
         Route::get('/adoptions/{id}/approve', 'approve')->name('adoptions.approve');
         Route::get('/adoptions/{id}/reject', 'reject')->name('adoptions.reject');
     });
@@ -106,7 +106,7 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
         Route::get('/posts/{id}','show');
         Route::get('/posts/{id}/edit','edit')->name('posts.edit');
         Route::post('/posts/{id}/update','update')->name('posts.update');
-        Route::get('/posts/{id}','destroy')->name('posts.delete');
+        Route::get('/posts/{id}/delete','destroy')->name('posts.delete');
 
       });
     // ====================================================================================================================================

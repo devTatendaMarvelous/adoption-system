@@ -44,7 +44,7 @@
                                         <p> <span class="icon-calendar"></span> {{  $carbon::parse($post->created_at)->format('d M Y') }}</p>
                                     </div>
                                 </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">{{ $post->title}} </a></h3>
+                                <h3 class="blog-one__title"><a href="/blog/{{ $post->id }}">{{ $post->title}} </a></h3>
                                 <p class="blog-one__text col-5">{{ $post->body }}</p>
                             </div>
                         </div>

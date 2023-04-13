@@ -33,6 +33,7 @@
 <th>Body</th>
 <th>File</th>
 <th>Date posted</th>
+
 <th class="text-center">Action</th>
 </tr>
 </thead>
@@ -57,17 +58,31 @@
                
           </td>
           <td>{{ $post->created_at }}</td>
+          
+        @if (Auth::user()->role==='Admin')
         
-          <td class="text-center">
-               <div class="actions">
-                    <a href="{{ route('posts.edit',[$post->id]) }}" class="btn btn-sm bg-success-light mr-2">
-                    <i class="fe fe-pencil"></i> Edit
-                    </a>
-                    <a href="{{ route('posts.delete',[$post->id]) }}" class="btn btn-sm bg-danger-light">
-                    <i class="fe fe-trash"></i> Delete
-                    </a>
-               </div>
-          </td>
+               <td class="text-center">
+                    <div class="actions">
+                         <a href="{{ route('posts.edit',[$post->id]) }}" class="btn btn-sm bg-success-light mr-2">
+                         <i class="fe fe-pencil"></i> Approve
+                         </a>
+                       
+                    </div>
+               </td>
+        @endif
+        @if (Auth::user()->id===$post->user_id)
+        
+               <td class="text-center">
+                    <div class="actions">
+                         {{-- <a href="{{ route('posts.edit',[$post->id]) }}" class="btn btn-sm bg-success-light mr-2">
+                         <i class="fe fe-pencil"></i> Edit
+                         </a> --}}
+                         <a href="{{ route('posts.delete',[$post->id]) }}" class="btn btn-sm bg-danger-light">
+                         <i class="fe fe-trash"></i> Delete
+                         </a>
+                    </div>
+               </td>
+        @endif
      </tr>
      
      @empty

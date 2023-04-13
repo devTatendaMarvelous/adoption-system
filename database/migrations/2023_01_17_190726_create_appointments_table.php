@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('adoption_id')->references('id')->on('adoptions')->onDelete('cascade');
+            $table->integer('adoption_id');
             $table->date('date');
             $table->string('session');
             $table->string('status')->default('Pending');

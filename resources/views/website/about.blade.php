@@ -381,7 +381,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="about.html" class="thm-btn skill-one__btn">Skill More</a>
+                        {{-- <a href="about.html" class="thm-btn skill-one__btn">Skill More</a> --}}
                     </div>
                 </div>
             </div>

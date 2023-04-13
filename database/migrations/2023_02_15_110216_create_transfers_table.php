@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('transfers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('orphan_id')->references('id')->on('orphans')->onDelete('cascade');
+            $table->integer('orphan_id');
             $table->integer('initiator');
             $table->string('orphanage');
             $table->text('notes')->nullable();

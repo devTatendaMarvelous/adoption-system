@@ -146,8 +146,19 @@ class AdoptionController extends Controller
      * @param  \App\Models\Adoption  $adoption
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Adoption $adoption)
+    public function destroy($id)
     {
-        //
+        
+        $adoption=Adoption::find($id);
+
+        
+     
+      
+       
+
+        $adoption->delete();
+        Toastr::success('adoption deleted successfully 🤗','Success');
+        return redirect('adoptions');
+        
     }
 }

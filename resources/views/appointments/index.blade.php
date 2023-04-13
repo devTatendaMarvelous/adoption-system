@@ -62,7 +62,7 @@
                           <a href="{{ route('appointments.edit',[$appointment->id]) }}" class="btn btn-sm bg-success-light mr-2">
                          <i class="fe fe-pencil"></i> Edit
                          </a>
-                         <a href="{{route('appointments.delete',[ $appointment->id])}}" class="btn btn-sm bg-danger-light">
+                         <a href="{{route('appointments.delete',[$appointment->id])}}" class="btn btn-sm bg-danger-light">
                          <i class="fe fe-trash"></i> Delete
                          </a>
                     </div>

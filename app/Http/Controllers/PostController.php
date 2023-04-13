@@ -74,10 +74,13 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        $post=$post->all()[0];
-        return view('posts.edit')->with('post',$post);
+        $post=Post::find($id);
+        $post->status='Approved';
+        $post->save();
+         Toastr::success('Post Approved successfully 🤗','Success');
+        return redirect('posts');
     }
 
     /**
@@ -100,6 +103,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+
+       $post->delete();
+        Toastr::success('post deleted successfully 🤗','Success');
+        return redirect('posts');
     }
 }

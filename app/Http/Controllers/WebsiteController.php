@@ -21,9 +21,8 @@ class WebsiteController extends Controller
     }
      public function blog()
     {
-        
         return view('website.blog')
-        ->with('posts', Post::all())
+        ->with('posts', Post::where('status','Approved')->get())
         ->with('carbon',Carbon::class);
     }
 

@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -8,7 +7,6 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
      * @return void
      */
     public function up()
@@ -19,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('body');
             $table->string('file')->nullable();
+            $table->string('status')->default('Pending');
             $table->timestamps();
         });
     }

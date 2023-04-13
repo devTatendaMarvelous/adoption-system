@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('donations', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->foreignId('donor_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('donor_id');
             $table->float('amount');
             $table->string('reference');
             $table->string('currency');

@@ -253,7 +253,7 @@
                                         <li>
                                             <input type="radio" id="donate-amount-2" 
                                                 checked="checked" onclick="setAmount(50)"/>
-                                            <label for="donate-amount-2" data-amount="50">$50</label>
+                                            <label for="donate-amount-2" data-amount="50">$50https://www.youtube.com/watch?v=ZY3vJPB1TAo</label>
                                         </li>
                                         <li>
                                             <input type="radio" id="donate-amount-3"  onclick="setAmount(100)"/>
@@ -396,7 +396,7 @@
                         <h3 class="video-one__title">Welcome To Our We Donation <br> Video Poor.</h3>
                         <p class="video-one__text">If you are going to use a passage of Lorem Ipsum, you <br> need to be
                             sure there isn't anything </p>
-                        <a href="about.html" class="thm-btn video-one__btn">Video More</a>
+                        <a href="/about" class="thm-btn video-one__btn">Video More</a>
                     </div>
                 </div>
             </div>
@@ -418,7 +418,7 @@
                         <div class="blog-one__single">
                             <div class="blog-one__img">
                                 <img src="website/images/blog/blog-1-1.jpg" alt="">
-                                <a href="blog-details.html">
+                                <a href="/">
                                     <span class="blog-one__plus"></span>
                                 </a>
                             </div>
@@ -431,7 +431,7 @@
                                         <p> <span class="icon-calendar"></span> Nov 09 2022</p>
                                     </div>
                                 </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">What are adverse childhood experiences?</a></h3>
+                                <h3 class="blog-one__title"><a href="/">What are adverse childhood experiences?</a></h3>
                                 <p class="blog-one__text">Adverse childhood experiences, commonly known as ACEs, happen before you turn 18. They include things like neglect, abuse, and experiencing the divorce of parents.</p>
                                 <p class="blog-one__text">ACEs can shape people’s lives. If someone has a high ACE score, they’re more likely to suffer from things like heart problems and substance misuse, as the CDC explains on their website. These experiences can also affect mental health.
 Notably, foster care is an “expanded ACE,” according to a research study in PubMed. There are ten main ACEs. Outside of that, there are expanded traumatic experiences. Foster care is one of these because it is traumatic for a child to be removed from their home. When they are placed in the child welfare system, children and youth see many people they don’t know. That’s scary for anyone and can be very traumatic for a child.
@@ -445,7 +445,7 @@ So, foster and adoptive parents should understand that their child has experienc
                         <div class="blog-one__single">
                             <div class="blog-one__img">
                                 <img src="website/images/blog/blog-1-2.jpg" alt="">
-                                <a href="blog-details.html">
+                                <a href="/">
                                     <span class="blog-one__plus"></span>
                                 </a>
                             </div>
@@ -458,7 +458,7 @@ So, foster and adoptive parents should understand that their child has experienc
                                         <p> <span class="icon-calendar"></span> Nov 09 2022</p>
                                     </div>
                                 </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Transracial parenting resources  </a></h3>
+                                <h3 class="blog-one__title"><a href="/">Transracial parenting resources  </a></h3>
                                 <p class="blog-one__text">In OOAS article “Advice to parents adopting a child of another race,” JaeRan Kim—assistant professor in the School of Social Work and Criminal Justice at the University of Washington, Tacoma—writes about her experience being adopted from Korea.
 She shares, “My parents were supportive and open about my adoption, but my Korean culture and recognition of my Asian American identity were not part of my life growing up. Like many people of their era, and unfortunately, still some today, my parents thought that being ‘color-blind’ equated to being non-racist.”
 Are you, like JaeRan Kim’s parents, caring for children or youth of another race or culture? If so, the below resources are for you.
@@ -471,7 +471,7 @@ Most of these books, online resources, and podcasts are specifically for white p
                         <div class="blog-one__single">
                             <div class="blog-one__img">
                                 <img src="website/images/blog/blog-1-3.jpg" alt="">
-                                <a href="blog-details.html">
+                                <a href="/">
                                     <span class="blog-one__plus"></span>
                                 </a>
                             </div>
@@ -484,7 +484,7 @@ Most of these books, online resources, and podcasts are specifically for white p
                                         <p> <span class="icon-calendar"></span> Nov 09 2022</p>
                                     </div>
                                 </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Adopted son inspires his parents</a></h3>
+                                <h3 class="blog-one__title"><a href="/">Adopted son inspires his parents</a></h3>
                                 <ul>
                                     <li>A Vermont couple adopted their son from foster care when he was three.</li>
                                     
