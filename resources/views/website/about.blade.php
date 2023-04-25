@@ -23,12 +23,9 @@
                         <div class="about-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                             <div class="about-one__img-box">
                                 <div class="about-one__img">
-                                    <img src="website/images/resources/about-one-img-1.jpg" alt="">
+                                    <img src="website/images/resources/1.jpg" style="max-width: 650px;" alt="">
                                 </div>
-                                <div class="about-one__small-img wow zoomIn animated animated" data-wow-delay="500ms"
-                                    data-wow-duration="2500ms">
-                                    <img src="website/images/resources/about-one-small-img.jpg" alt="">
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
