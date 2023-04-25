@@ -86,7 +86,7 @@
                                         <a href="/blog">Blog</a>
                                         
                                     </li> --}}
-                                    <li><a href="/contact">Contact</a></li>
+                                    {{-- <li><a href="/contact">Contact</a></li> --}}
                                 </ul>
                             </div>
                             <a href="/adoptions/adopt" class="thm-btn main-header__btn m-4">Adopt Now</a>
