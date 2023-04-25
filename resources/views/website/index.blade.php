@@ -21,7 +21,7 @@
                     <!--Start Swiper Slide Single-->
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url(website/images/backgrounds/main-slider-1-1.jpg);"></div>
+                            style="background-image: url(website/images/backgrounds/video-one-bg.jpg);"></div>
                         <div class="main-slider-shape-1"></div>
                         <div class="main-slider-shape-2"></div>
                         <div class="main-slider-shape-3 zoominout"></div>
@@ -155,12 +155,9 @@
                         <div class="about-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                             <div class="about-one__img-box">
                                 <div class="about-one__img">
-                                    <img src="website/images/resources/about-one-img-1.jpg" alt="">
+                                    <img src="website/images/resources/1.jpg" style="max-width: 650px;" alt="">
                                 </div>
-                                <div class="about-one__small-img wow zoomIn animated animated" data-wow-delay="500ms"
-                                    data-wow-duration="2500ms">
-                                    <img src="website/images/resources/about-one-small-img.jpg" alt="">
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -220,7 +217,7 @@
 
         <!--Support Us Start-->
         <section class="support-us">
-            <div class="support-us-bg" style="background-image: url(website/images/backgrounds/support-us-bg.jpg);">
+            <div class="support-us-bg" style="background: rgb(0, 0, 0,0.8) url(website/images/backgrounds/video-one-bg.jpg);">
             </div>
             <div class="container">
                 <div class="row">
@@ -253,7 +250,7 @@
                                         <li>
                                             <input type="radio" id="donate-amount-2" 
                                                 checked="checked" onclick="setAmount(50)"/>
-                                            <label for="donate-amount-2" data-amount="50">$50https://www.youtube.com/watch?v=ZY3vJPB1TAo</label>
+                                            <label for="donate-amount-2" data-amount="50">$50</label>
                                         </li>
                                         <li>
                                             <input type="radio" id="donate-amount-3"  onclick="setAmount(100)"/>
@@ -287,14 +284,7 @@
                     </script>
 
 
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="support-us__right">
-                            <div class="support-us__right-content">
-                                <h3 class="support-us__right-content-title">10 Surgeons <br> 22 Healed</h3>
-                                <p class="support-us__right-content-text">[New Professional every year]</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -377,31 +367,7 @@
 
       
 
-        <!--video One Start-->
-        <section class="video-one">
-            <div class="video-one__content-box">
-                <div class="video-one-shape sauare-mover"></div>
-                <div class="video-one-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                    style="background-image: url(website/images/backgrounds/video-one-bg.jpg);"></div>
-                <div class="container">
-                    <div class="video-one__inner">
-                        <div class="video-one__video-link">
-                            <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                <div class="video-one__video-icon">
-                                    <span class="fa fa-play"></span>
-                                    <i class="ripple"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="video-one__title">Welcome To Our We Donation <br> Video Poor.</h3>
-                        <p class="video-one__text">If you are going to use a passage of Lorem Ipsum, you <br> need to be
-                            sure there isn't anything </p>
-                        <a href="/about" class="thm-btn video-one__btn">Video More</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--video One End-->
+      
 
        
 
