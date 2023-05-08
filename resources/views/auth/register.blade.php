@@ -43,7 +43,16 @@
         
        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
     </div>
-    
+      <div class="form-group">
+        
+        <input id="answer" type="answer" class="form-control @error('answer') is-invalid @enderror" name="answer" required autocomplete="current-answer" placeholder="Enter Your Recovery Phrase">
+
+                                @error('answer')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+    </div>
     <div class="form-group">
         <button class="btn btn-primary btn-block" type="submit">Register</button>
     </div>

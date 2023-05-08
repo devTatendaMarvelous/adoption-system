@@ -20,7 +20,8 @@
 <div class="row align-items-center">
 <div class="col-auto profile-image">
 <a href="#">
-<img class="rounded-circle" alt="User Image" src="{{ $orphan->photo? asset('storage/'.$orphan->photo):'assets/img/profiles/avatar-03.jpg' }}">
+     
+<img class="rounded-circle" alt="User Image" src="{{ $orphan->photo? asset('storage/'.$orphan->photo):'/noimage.png'  }}"">
 </a>
 </div>
 <div class="col ml-md-n2 profile-user-info">
@@ -43,7 +44,10 @@
 <div class="card-body">
 <h5 class="card-title d-flex justify-content-between">
 <span>Personal Details</span>
-<a class="edit-link" data-toggle="modal" href="#edit_personal_details"><i class="fa fa-edit mr-1"></i>Edit</a>
+@if (Auth::user()->role==='Admin')
+     
+<a class="edit-link" data-toggle="modal" href="{{ route('orphans.edit',[$orphan->id]) }}"><i class="fa fa-edit mr-1"></i>Edit</a>
+@endif
 </h5>
 <div class="row">
 <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Name</p>

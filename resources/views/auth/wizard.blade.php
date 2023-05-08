@@ -9,7 +9,9 @@
     float: right;
     margin-left: 20px;
 }
-
+.hide{
+    display:none;
+}
 
 </style>
 <form id="regForm" action="{{ route('families.store') }}" method="POST" class="col-12" enctype="multipart/form-data">
@@ -24,14 +26,14 @@
     <div class="row mt-5">
     <div class="col-md-3">
         <h5>Have you taken foster care training classes? </h5>
-                <div class="form-check">
+                <div class="form-check ">
                     <input class="form-check-input  " type="radio" name="foster_training" onclick="showTextbox()"id="yes" value="1">
                     <label class="form-check-label last" for="yes">
                         Yes 
                     </label>
             </div>
             
-            <div class="form-check">
+            <div class="form-check ">
                 <div class="">
             <input class="form-check-input  " type="radio" name="foster_training" id="no"  onclick="hideTextbox()"value="0">
             <label class="form-check-label " for="no">
@@ -39,7 +41,7 @@
             </label>
             </div>
             </div>
-            <div class="form-check">
+            <div class="form-check ">
                 <div class="">
                     <input class="form-check-input " style="margin-left: -55px;"  type="radio" name="foster_training"onclick="hideTextbox()" id="idk" value="2">
                     <label class="form-check-label " for="idk" >
@@ -51,7 +53,7 @@
     </div>
     <div class="col-md-3">
         <h5>Are you or have you ever been a foster parent?</h5>
-            <div class="form-check">
+            <div class="form-check ">
                 <div class="">
                     <input class="form-check-input  " type="radio" name="foster_parent" id="yes" value="1">
                     <label class="form-check-label last" for="yes">
@@ -59,7 +61,7 @@
                     </label>
             </div>
             </div>
-            <div class="form-check">
+            <div class="form-check ">
                 <div class="">
             <input class="form-check-input  " type="radio" name="foster_parent" id="no" value="0">
             <label class="form-check-label " for="no">
@@ -71,14 +73,14 @@
     </div>
     <div class="col-md-3">
         <h5>Do you have a current home study or foster care license in your state of residence? </h5>
-                <div class="form-check">
+                <div class="form-check ">
                     <input class="form-check-input  " type="radio" name="license" id="yesl" value="1">
                     <label class="form-check-label last" for="yesl">
                         Yes 
                     </label>
             </div>
             
-            <div class="form-check">
+            <div class="form-check ">
                 <div class="">
             <input class="form-check-input  " type="radio" name="license" id="l"  value="0">
             <label class="form-check-label " for="l">
@@ -86,7 +88,7 @@
             </label>
             </div>
             </div>
-            <div class="form-check">
+            <div class="form-check ">
                 <div class="">
                     <input class="form-check-input " style="margin-left: -55px;"  type="radio" name="license" id="l" value="2">
                     <label class="form-check-label " for="l" >
@@ -99,7 +101,7 @@
     <div class="col-md-3">
         <h5>Date home study or license completed</h5>
                 
-            <div class="form-check">
+            <div class="form-check ">
                 <div class="">
                     <input class="form-control "   type="date" name="date_completed" id="l" value="2">
                     
@@ -135,21 +137,24 @@
         </div>
    
         <div class="col-md-12 my-5 text center">
-            Race:
-             <div class="form-check">
+           
+            <div class="form-check ">
+                     Race:
+            </div> 
+             <div class="form-check ">
                     <input type="checkbox" name="race" id=""class="form-check-input"  value="African" >
                     
                     <label class="form-check-label ml-5">African</label>
             </div> 
-            <div class="form-check">
+            <div class="form-check ">
                     <input type="checkbox" name="race" id=""class="form-check-input"  value="Asian" >
                     
                     <label class="form-check-label ml-5">Asian</label>
             </div> 
-            <div class="form-check">
-                    <input type="checkbox" name="race" id=""class="form-check-input mr-5"  value="American" >
+            <div class="form-check ">
+                    <input type="checkbox" name="race" id=""class="form-check-input "  value="American" >
                     
-                    <label class="form-check-label ml-5" > American</label>
+                    <label class="form-check-label  " style="margin-left:4rem;"> American</label>
             </div> 
               
         </div>
@@ -164,7 +169,7 @@
                     <option value="Married">Relationship Status</option>
                     <option value="Married">Married</option>
                     <option value="Single">Single</option>
-                    <option value="Divorced">Divorced</option>
+                    <option value="Divorced">Devorced</option>
               </select>
               
         </div>
@@ -187,7 +192,14 @@
    
         <div class="col-md-3" style="">
             
-               <input class="form-control " name="password" type="password" placeholder="Password" required >
+               <input class="form-control " id="pass" name="password" type="password" placeholder="Password" required >
+        </div>
+        
+        <div class="col-md-3" style="">
+            
+               <input class="form-control " id="pass2" type="password" onkeyup="validate()" placeholder="Password" required >
+               <br>
+               <div class="text-danger" id="err"></div>
         </div>
    
         
@@ -215,5 +227,19 @@
 
 </form>
 
-
+<script>
+    const validate=()=>{
+        const pass=document.querySelector('#pass'),
+        pass2=document.querySelector('#pass2'),
+        err=document.querySelector('#err'),
+        btn=document.querySelector('#nextBtn')
+        if(pass.value!=pass2.value){
+            err.innerHTML='Passwords do not match'
+            btn.classList.add('hide')
+        }else{
+            err.innerHTML=''
+            btn.classList.remove('hide')
+        }
+    }
+</script>
 @endsection

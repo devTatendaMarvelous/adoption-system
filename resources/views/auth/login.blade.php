@@ -28,6 +28,7 @@
                                     </span>
                                 @enderror
     </div>
+    <div class="text-center dont-have">Forgot password? <a href="{{ route('reset') }}">Reset</a></div>
     <div class="form-group">
         <button class="btn btn-primary btn-block" type="submit">Login</button>
     </div>

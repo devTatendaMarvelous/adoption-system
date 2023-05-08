@@ -70,7 +70,7 @@
                     </div>
                </td>
         @endif
-        @if (Auth::user()->id===$post->user_id)
+        @if (Auth::user()->id===$post->user_id|| Auth::user()->role==='Admin')
         
                <td class="text-center">
                     <div class="actions">

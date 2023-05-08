@@ -8,41 +8,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ORPHANAGE ADOPTION SYSTEM</title>
     <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="website/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="website/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="website/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="website/images/favicons/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('website/images/favicons/apple-touch-icon.png')}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('website/images/favicons/favicon-32x32.png')}}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('website/images/favicons/favicon-16x16.png')}}" />
+    <link rel="manifest" href="{{asset('website/images/favicons/site.webmanifest')}}" />
     <meta name="description" content="Sopot HTML Template For Charity" />
 
-    <link rel="stylesheet" href="website/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="website/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="website/vendors/animate/custom-animate.css" />
-    <link rel="stylesheet" href="website/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="website/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="website/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="website/vendors/nouislider/nouislider.min.css" />
-    <link rel="stylesheet" href="website/vendors/nouislider/nouislider.pips.css" />
-    <link rel="stylesheet" href="website/vendors/odometer/odometer.min.css" />
-    <link rel="stylesheet" href="website/vendors/swiper/swiper.min.css" />
-    <link rel="stylesheet" href="website/vendors/sopot-icons/style.css">
-    <link rel="stylesheet" href="website/vendors/tiny-slider/tiny-slider.min.css" />
-    <link rel="stylesheet" href="website/vendors/reey-font/stylesheet.css" />
-    <link rel="stylesheet" href="website/vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="website/vendors/owl-carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="website/vendors/bxslider/jquery.bxslider.css" />
-    <link rel="stylesheet" href="website/vendors/bootstrap-select/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="website/vendors/vegas/vegas.min.css" />
-    <link rel="stylesheet" href="website/vendors/jquery-ui/jquery-ui.css" />
-    <link rel="stylesheet" href="website/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="{{asset('website/vendors/bootstrap/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/animate/animate.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/animate/custom-animate.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/fontawesome/css/all.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/jarallax/jarallax.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/jquery-magnific-popup/jquery.magnific-popup.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/nouislider/nouislider.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/nouislider/nouislider.pips.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/odometer/odometer.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/swiper/swiper.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/sopot-icons/style.css')}}">
+    <link rel="stylesheet" href="{{asset('website/vendors/tiny-slider/tiny-slider.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/reey-font/stylesheet.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/owl-carousel/owl.carousel.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/owl-carousel/owl.theme.default.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/bxslider/jquery.bxslider.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/bootstrap-select/css/bootstrap-select.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/vegas/vegas.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/jquery-ui/jquery-ui.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/vendors/timepicker/timePicker.css')}}" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href="website/css/sopot.css" />
-    <link rel="stylesheet" href="website/css/sopot-responsive.css" />
+    <link rel="stylesheet" href="{{asset('website/css/sopot.css')}}" />
+    <link rel="stylesheet" href="{{asset('website/css/sopot-responsive.css')}}" />
 </head>
 
 <body>
     <div class="preloader">
-        <img class="preloader__image" width="60" src="website/images/loader.png" alt="" />
+        <img class="preloader__image" width="60" src="{{asset('website/images/loader.png')}}" alt="" />
     </div>
     <!-- /.preloader -->
     <div class="page-wrapper">
@@ -67,7 +67,7 @@
                         <div class="main-menu-wrapper__left">
                             <div class="main-menu-wrapper__logo ">
                                 <div class="row">
-                                    <a class="col-2" href="/"><img src="website/images/resources/logo-1.png" alt=""></a> 
+                                    <a class="col-2" href="/"><img src="{{asset('website/images/resources/logo-1.png')}}" alt=""></a> 
                                 </div>
                             </div>
                         </div>
@@ -82,11 +82,11 @@
                                     <li><a href="/about">About</a></li>
                                     
                                     
-                                    {{-- <li class="">
+                                    <li class="">
                                         <a href="/blog">Blog</a>
                                         
-                                    </li> --}}
-                                    {{-- <li><a href="/contact">Contact</a></li> --}}
+                                    </li>
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                             </div>
                             <a href="/adoptions/adopt" class="thm-btn main-header__btn m-4">Adopt Now</a>

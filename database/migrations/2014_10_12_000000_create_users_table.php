@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('role')->default('Donor');
             $table->string('photo')->nullable();
             $table->string('password');
+            $table->mediumText('answer');
             $table->timestamps();
         });
     }

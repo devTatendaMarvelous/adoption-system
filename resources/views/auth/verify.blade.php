@@ -5,20 +5,26 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+                <div class="card-header text-center">Please Enter Your Security Phrase To Continue</div>
 
                 <div class="card-body">
-                    @if (session('resent'))
-                        <div class="alert alert-success" role="alert">
-                            {{ __('A fresh verification link has been sent to your email address.') }}
-                        </div>
-                    @endif
+                  
+                  
 
-                    {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }},
-                    <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+                    
+                    <form class="d-inline text-center" method="POST" action="/check">
                         @csrf
-                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+                        <div class="form-group">
+        
+         <input id="answer" type="answer" class="form-control @error('answer') is-invalid @enderror" name="answer" value="{{ old('answer') }}" placeholder="Security Phrase" required autocomplete="answer" autofocus>
+
+                                @error('answer')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+    </div>
+                        <button type="submit" class="btn btn-primary p- ">{{ __('Send') }}</button>
                     </form>
                 </div>
             </div>

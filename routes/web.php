@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
 
 Route::group(['namespace'=>'App\Http\Controllers'], function() {
 
@@ -12,11 +13,32 @@ Route::group(['namespace'=>'App\Http\Controllers'], function() {
         Route::get('/about', 'about');
         Route::get('/contact', 'contact');
         Route::get('/blog', 'blog');
-        Route::get('/blog/{id}', 'blog');
+        Route::get('/reset', 'reset')->name('reset');
+        Route::post('/update.password', 'update')->name('update.password');
+        Route::get('/blog/{id}', 'show');
     });
+    
 });
 
 Route::group(['namespace'=>'App\Http\Controllers'], function() {
+  Route::get('/security-check', function(){
+    
+    return view('auth.verify');
+  });
+
+  Route::post('/check', function(Request $request){
+    
+    if(Auth::user()->answer===$request->answer){
+       Toastr::success(' Login Success','Success');
+      return redirect('home');
+    }else{
+      
+      Auth::logout();
+      Toastr::error(' Your Security Phrase Is Incorrect','Login Failed ');
+      return redirect('login');
+    }
+    
+  });
 
     Route::controller(FamilyController::class)->group(function () {
         Route::post('/families/search', 'search')->name('families.search');

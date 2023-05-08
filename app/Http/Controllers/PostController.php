@@ -101,10 +101,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
 
-       $post->delete();
+       Post::find($id)->delete();
         Toastr::success('post deleted successfully 🤗','Success');
         return redirect('posts');
     }

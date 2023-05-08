@@ -60,7 +60,7 @@
           <tr>
           <td>
                <h2 class="table-avatar">
-                    <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="{{ $orphan->photo? asset('storage/'.$orphan->photo):'/noimage.png'  }}" alt="Orphan "></a>
+                    <a href="#" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="{{ $orphan->photo? asset('storage/'.$orphan->photo):'/noimage.png'  }}" alt="Orphan "></a>
                     <a href="">{{ $orphan->orphan_name }}<span>  {{ $orphan->status }}</span></a>
                </h2>
           </td>

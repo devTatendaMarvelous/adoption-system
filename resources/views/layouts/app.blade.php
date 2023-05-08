@@ -30,9 +30,11 @@
 <link rel="stylesheet" href="{{ asset('assets/plugins/fullcalendar/fullcalendar.min.css')}}">
 
 <link rel="stylesheet" href="{{ asset('assets/plugins/light-gallery/css/lightgallery.min.css')}}">
-
+<link rel="stylesheet" href="{{ URL::to('assets/toastr.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
-</head> </head>
+<script src="{{ URL::to('assets/toastr_jquery.min.js') }}"></script>
+	<script src="{{ URL::to('assets/toastr.min.js') }}"></script>
+</head> 
 <body>
 
 <div class="main-wrapper login-body" style="background-image: url('{{ asset('bg.jpeg') }}'); background-size:cover;">
@@ -45,6 +47,7 @@
 
 <div class="login-right col-md-8">
 <div class="login-right-wrap">
+	{!! Toastr::message() !!}
 @yield('content')
 </div>
 </div>
