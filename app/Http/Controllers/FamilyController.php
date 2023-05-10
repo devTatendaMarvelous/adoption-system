@@ -52,6 +52,7 @@ public function search(Request $request)
             'date_completed'=>'required',
             'race'=>'required',
             'ref_letter'=>'required',
+            'answer'=>'required',
 
      ]);
 

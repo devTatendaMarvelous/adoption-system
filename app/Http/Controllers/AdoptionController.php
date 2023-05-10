@@ -53,7 +53,7 @@ class AdoptionController extends Controller
 
      public function adopt()
     {
-        $orphans=Orphan::orderBy('id','DESC')->get();
+        $orphans=Orphan::orderBy('id','DESC')->where('status','Available')->get();
         return view('adoptions.adopt')->with('orphans',$orphans);
     }
 

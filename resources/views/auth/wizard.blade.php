@@ -201,6 +201,11 @@
                <br>
                <div class="text-danger" id="err"></div>
         </div>
+        <div class="col-md-3" style="">
+            
+               <input class="form-control " name="answer" placeholder="Recovery Phrase" required >
+           
+        </div>
    
         
    
