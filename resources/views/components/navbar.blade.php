@@ -1,6 +1,5 @@
 
 <div class="header">
-
 <div class="header-left">
 <a href="{{ route('home') }}" class="logo">
      <div class="row p-2 " style="margin-top:-25px; ">
@@ -8,20 +7,25 @@
           
      </div>
 </a>
-
 </div>
 
 <a href="javascript:void(0);" id="toggle_btn">
 <i class="fe fe-text-align-left"></i>
 </a>
-
-
 <a class="mobile_btn" id="mobile_btn">
 <i class="fa fa-bars"></i>
 </a>
 
 
 <ul class="nav user-menu">
+
+<li class="nav-item dropdown noti-dropdown">
+<a href="messages" class="dropdown-toggle nav-link" >
+<i class="fe fe-bell"></i> <span class="badge badge-pill">3</span>
+</a>
+
+</li>
+
 <div class="row text-center text-white">
 
      <h5 class=" col-12">{{ Auth::user()->name }}</h5>

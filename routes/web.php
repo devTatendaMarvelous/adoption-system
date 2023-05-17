@@ -6,19 +6,21 @@ use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
 
 Route::group(['namespace'=>'App\Http\Controllers'], function() {
-
-    Route::controller(WebsiteController::class)->group(function () {
-        // Route::post('/families/search', 'search')->name('families.search');
-        Route::get('/', 'index');
-        Route::get('/about', 'about');
-        Route::get('/contact', 'contact');
-        Route::get('/blog', 'blog');
-        Route::get('/reset', 'reset')->name('reset');
-        Route::post('/update.password', 'update')->name('update.password');
-        Route::get('/blog/{id}', 'show');
+  
+  Route::controller(WebsiteController::class)->group(function () {
+    // Route::post('/families/search', 'search')->name('families.search');
+    Route::get('/', 'index');
+    Route::get('/about', 'about');
+    Route::get('/contact', 'contact');
+    Route::get('/blog', 'blog');
+    Route::get('/reset', 'reset')->name('reset');
+    Route::post('/update.password', 'update')->name('update.password');
+    Route::get('/blog/{id}', 'show');
     });
     
-});
+  });
+  Route::post('/messages/store', [\App\Http\Controllers\MessageController::class,'store'])->name('messages.store');
+
 
 Route::group(['namespace'=>'App\Http\Controllers'], function() {
   Route::get('/security-check', function(){
@@ -74,7 +76,11 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
      Route::post('/user', 'update')->name('user.update');
     });
 
-    
+     Route::controller(MessageController::class)->group(function () {
+        Route::get('/messages', 'index')->name('messages');
+        Route::get('/messages/{id}', 'destroy')->name('messages.delete');
+        
+    });
     // ====================================================================================================================================
 
       Route::controller(DonationController::class)->group(function(){

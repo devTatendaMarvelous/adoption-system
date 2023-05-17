@@ -29,8 +29,9 @@
                                 <h2 class="section-title__title">We out The Form Prepared at <br> Your Contact?</h2>
                             </div>
                             <div class="contact-page__form">
-                                <form action="" class="comment-one__form contact-form-validated"
-                                    novalidate="novalidate">
+                                <form action="{{ route('messages.store') }}" class="comment-one__form contact-form-validated"
+                                 method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-xl-6">
                                             <div class="comment-form__input-box">
@@ -42,14 +43,10 @@
                                                 <input type="email" placeholder="Email address" name="email">
                                             </div>
                                         </div>
-                                        <div class="col-xl-6">
+                                      
+                                        <div class="col-12">
                                             <div class="comment-form__input-box">
-                                                <input type="text" placeholder="Phone number" name="Phone">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="comment-form__input-box">
-                                                <input type="text" placeholder="Subject" name="Subject">
+                                                <input type="text" placeholder="Subject" name="subject">
                                             </div>
                                         </div>
                                     </div>

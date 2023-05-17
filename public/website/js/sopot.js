@@ -199,20 +199,20 @@
           required: true
         }
       },
-      submitHandler: function (form) {
+      // submitHandler: function (form) {
         // sending value with ajax request
-        $.post(
-          $(form).attr("action"),
-          $(form).serialize(),
-          function (response) {
-            $(form).parent().find(".result").append(response);
-            $(form).find('input[type="text"]').val("");
-            $(form).find('input[type="email"]').val("");
-            $(form).find("textarea").val("");
-          }
-        );
-        return false;
-      }
+        // $.post(
+        //   $(form).attr("action"),
+        //   $(form).serialize(),
+        //   function (response) {
+        //     $(form).parent().find(".result").append(response);
+        //     $(form).find('input[type="text"]').val("");
+        //     $(form).find('input[type="email"]').val("");
+        //     $(form).find("textarea").val("");
+        //   }
+        // );
+        // return false;
+      //}
     });
   }
 

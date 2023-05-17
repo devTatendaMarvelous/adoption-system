@@ -52,13 +52,13 @@
 </li>
 @endif
 <li class="submenu">
-<a href="#"><i class="fe fe-user-plus"></i> <span> Feedback </span> <span class="menu-arrow"></span></a>
+<a href="#"><i class="fe fe-email"></i> <span> Feedback </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
 @if (Auth::user()->role==="Admin")
 <li><a class="" href="{{ route('posts') }}"> All Feedbacks </a></li>
+<li><a class="" href="{{ route('messages') }}">Messages</a></li>
 @endif
 <li><a class="" href="{{ route('posts.create') }}"> Give Feedback </a></li>
-{{-- <li><a class="" href="{{ route('appointments') }}">Adoption Appointments </a></li> --}}
 {{-- <li><a class="" href="lock-screen.html"> Lock Screen </a></li> --}}
 </ul>
 </li>
