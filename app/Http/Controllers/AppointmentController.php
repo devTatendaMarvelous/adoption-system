@@ -15,13 +15,23 @@ class AppointmentController extends Controller
 {
     public function index()
     {
-        $appointments=Appointment::join('adoptions','adoptions.id','=','appointments.adoption_id')
-        ->join('orphans','orphans.id','=','adoptions.orphan_id')
-        ->join('families','families.id','=','adoptions.family_id')
-        ->get([
-            'appointments.*','orphans.orphan_name','families.rep_name'
-        ]);
+        if(Auth::user()->role ==='Family'){
+            $appointments=Appointment::join('adoptions','adoptions.id','=','appointments.adoption_id')
+            ->join('orphans','orphans.id','=','adoptions.orphan_id')
+            ->join('families','families.id','=','adoptions.family_id')
+            ->where('families.email',Auth::user()->email)
+            ->get([
+                'appointments.*','orphans.orphan_name','families.rep_name',
+            ]);
+        }else{
+            $appointments=Appointment::join('adoptions','adoptions.id','=','appointments.adoption_id')
+            ->join('orphans','orphans.id','=','adoptions.orphan_id')
+            ->join('families','families.id','=','adoptions.family_id')
+            ->get([
+                'appointments.*','orphans.orphan_name','families.rep_name',
+            ]);
 
+        }
         return view('appointments.index')->with('carbon',Carbon::class)->with('appointments',$appointments);
     }
 

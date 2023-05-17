@@ -8,38 +8,13 @@
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                             <div class="footer-widget__column footer-widget-one__about">
                                 <div class="footer-widget-one__about-logo">
-                                    <a href="index-2.html"><img src="{{asset('website/images/resources/footer-logo.png')}}" alt=""></a>
+                                    <a href="index-2.html"><img src="{{asset('website/images/resources/logo-1.png')}}" alt=""></a>
                                 </div>
                                 <p class="footer-widget-one__about-text">
                                     Every child deserves a happy and healthy childhood and the opportunity to build a brighter future.
 Your support provides access to education, protection of protection, nutrition of nutritious meals and the chance to build a secure future.
                                 </p>
-                                <ul class="list-unstyled footer-widget-one__list">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-place"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>13/A, Miranda Halim City.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-envelope"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p><a href="mailto:demo@example.com">demo@example.com</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-call"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p><a href="tel:09969569535">099 695 695 35</a></p>
-                                        </div>
-                                    </li>
-                                </ul>
+                               
                             </div>
                         </div>
 
@@ -207,7 +182,7 @@ Your support provides access to education, protection of protection, nutrition o
             <div class="site-footer__bottom">
                 <div class="container">
                     <div class="site-footer__bottom-inner">
-                        <p class="site-footer__bottom-text">© 2023 Copyright by </p>
+                        <p class="site-footer__bottom-text">© 2023 Copyright by Tadiwanashe Nyazou</p>
                     </div>
                 </div>
             </div>
@@ -234,14 +209,7 @@ Your support provides access to education, protection of protection, nutrition o
             <!-- /.mobile-nav__container -->
 
             <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@sopot.com">needhelp@sopot.com</a>
-                </li>
-                <li>
-                    <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
-                </li>
+             
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">

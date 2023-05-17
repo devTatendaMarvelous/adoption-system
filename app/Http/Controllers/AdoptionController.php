@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Family;
 use App\Models\Orphan;
 use App\Models\Adoption;
@@ -30,8 +29,6 @@ class AdoptionController extends Controller
             $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')->join('orphans','orphans.id','=','adoptions.orphan_id')
             ->where('family_id',$id->id)->orderBy('id','DESC')->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
         }
-
-
        
         return view('adoptions.index')->with('adoptions',$adoptions);
     }
@@ -45,11 +42,9 @@ class AdoptionController extends Controller
        ->orWhere('adoptions.status','like',"%{$request->search}%")
        ->orderBy('id','DESC'
        )->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
-
        
         return view('adoptions.index')->with('adoptions',$adoptions);
     }
-
 
      public function adopt()
     {

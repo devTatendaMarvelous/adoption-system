@@ -33,7 +33,7 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
 </head> </head>
-<body style="background-image: url('{{ asset('bg.jpeg') }}'); background-size:cover;">
+<body style="background-image: url('{{ asset('fam.jpg') }}'); background-size:cover;">
 
 
 @yield('content')
