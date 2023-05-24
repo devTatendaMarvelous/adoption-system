@@ -72,7 +72,7 @@ Please choose a username.
 <div class="form-row">
 <div class="col-md-6 mb-3 text-center">
 <label for="validationCustom03">photo</label>
-<input type="file" name="photo" class="form-control" id="validationCustom03" placeholder="City" >
+<input type="file" name="photo" class="form-control" id="myFile" onchange="getFileProperties()"  placeholder="City" >
 <img src="{{ asset('storage/'.$orphan->photo) }}" alt="no photo" width="100">
 <div class="invalid-feedback">
 Please provide a photo.

@@ -44,7 +44,11 @@
 <div class="form-row">
 <div class="col-md-6 mb-3">
 <label for="validationCustom03">Post File</label>
-<input type="file" name="file" class="form-control" id="validat ionCustom03" placeholder="City" >
+<input type="file" name="file" class="form-control" id="myFile" onchange="getFileProperties()" >
+     @error('file')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+     
 <div class="invalid-feedback">
 Please provide a photo.
 </div>
@@ -74,5 +78,6 @@ Please choose a username.
 
 </div>
 </div>
+
 
 </x-dashboard>

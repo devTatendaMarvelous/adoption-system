@@ -14,8 +14,6 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/feathericon.min.css')}}">
 <link rel="stylesheet" href="{{ asset('assets/css/style-orange.css')}}">
-{{--<link rel="stylesheet" href="{{ asset('assets/css/style-red.css')}}">--}}
-{{--<link rel="stylesheet" href="{{ asset('assets/css/style-teal.css')}}">--}}
 
 <link rel="stylesheet" href="{{ asset('assets/plugins/datatables/datatables.min.css')}}">
 
@@ -54,7 +52,22 @@
 {!! Toastr::message() !!}
 {{ $slot }}
 
+<script>
+          function getFileProperties() {
+               // Get the file input element
+               var fileInput = document.getElementById("myFile");
 
+               // Get the file object
+               var file = fileInput.files[0];
+
+               // Get the file size in bytes
+               var fileSize = file.size;
+               if(fileSize>5000000){
+                    // Display the file size
+                    alert( "You can not upload a file larger than 5mb")
+               }
+          }
+</script>
 
 <script src="{{ asset('assets/js/jquery-3.2.1.min.js')}}"></script>
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+     <input type="file" id="myFile" onchange="getFileProperties()">
+     <p id="fileSize"></p>
+     <script>
+          function getFileProperties() {
+               // Get the file input element
+               var fileInput = document.getElementById("myFile");
+
+               // Get the file object
+               var file = fileInput.files[0];
+
+               // Get the file size in bytes
+               var fileSize = file.size;
+
+               // Display the file size
+               document.getElementById("fileSize").innerHTML = "File size: " + fileSize + " bytes";
+          }
+     </script>
+</body>
+
+</html>

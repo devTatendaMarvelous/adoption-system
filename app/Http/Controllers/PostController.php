@@ -43,12 +43,17 @@ class PostController extends Controller
         $post=$request->validate([
             'title'=>'required',
             'body'=>'required',
+              'file' => 'required|file|max:5120', 
         ]);
 
         if($request->has('file')){
-            $post['file']=$request->file('file')->store('postFiles','public');
+
             
-        }
+                $post['file']=$request->file('file')->store('postFiles','public');
+          }
+           
+            
+        
         $post['user_id']=Auth::user()->id;
         
         Post::create($post);

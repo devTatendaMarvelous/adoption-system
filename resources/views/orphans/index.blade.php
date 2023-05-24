@@ -21,9 +21,6 @@
 
 <div class="card-header">
      <div class="row">
-          
-                              
-
           <h4 class="card-title col-md-3">List of Orphans</h4>
           <button type="button" class="col-md-2 btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">
                               Upload CSV
@@ -43,7 +40,7 @@
 
 <div class="card-body">
 <div class="table-responsive">
-<table class="table table-hover table-center mb-0">
+<table class="table table-hover table-center mb-0" id="example">
 <thead>
 <tr>
 <th>Name</th>

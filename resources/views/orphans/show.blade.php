@@ -69,8 +69,6 @@
 <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Status</p>
 <p class="col-sm-9">{{ $orphan->status }}</p>
 </div>
-
-
 </div>
 </div>
 

@@ -175,7 +175,7 @@
         </div>
         <div class="col-md-3">
             Reference Letter
-               <input class="form-control " name="ref_letter" type="file" >
+               <input class="form-control " id="myFile" onchange="getFileProperties()" name="ref_letter" type="file" >
         </div>
         
     </div>

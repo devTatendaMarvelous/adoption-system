@@ -63,6 +63,13 @@ class AppointmentController extends Controller
         $update=$request->validate([
             'date'=>'required','session'=>'required',
         ]);
+         $app=Appointment::join('adoptions','adoptions.id','=','appointments.adoption_id')
+        ->join('families','families.id','=','adoptions.family_id')
+        ->where('appointments.id',$id)->get(['appointments.*','families.email']);
+        MailWrapper::emailNotify($app[0]->email,[
+                    'title'=>'Appointment Change',
+                    'body'=>'Dear client, please be advised that your appointment  with us for the date '.Carbon::parse($appointment->date)->format('d M Y').' has been changed. Kindly login to view the details fo the updated appointment'
+                ]);
         $appointment->update($update);
         Toastr::success('Appointment Updated 🤗','Success');
         return redirect('appointments');
