@@ -22,14 +22,26 @@
 <div class="card-header">
      <div class="row">
           <h4 class="card-title col-md-3">List of Orphans</h4>
+          <div class="col-12">
+               
+          </div>
           <button type="button" class="col-md-2 btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">
                               Upload CSV
                               </button>
                               <div class="col-md-1"></div>
           <div class="col-md-6">
+             
                <form action="{{ route('orphans.search') }}" method="post" class="row">
                     @csrf
-                    <input type="text" name="search" placeholder="Search Orphan" class="form-confrol col-6">
+                   
+                           <label for="validationCustom04">Age </label>
+                              <select name="age" class="form-control text-center col-6" id="validationCustom04">
+                                <option value="0-5">0-5</option>
+                                <option value="6-10">6-10</option>
+                                <option value="10-14">10-14</option>
+                                <option value="15-18">15-18</option>
+                           </select>
+                       
                     <div class="col-1"></div>
                     <button class="col-3 btn btn-info">Search</button>
                </form>
