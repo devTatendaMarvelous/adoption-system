@@ -31,14 +31,14 @@
                               <div class="col-md-1"></div>
           <div class="col-md-6">
              
-               <form action="{{ route('orphans.search') }}" method="post" class="row">
+               <form action="{{ route('orphans.age') }}" method="post" class="row">
                     @csrf
                    
                            <label for="validationCustom04">Age </label>
                               <select name="age" class="form-control text-center col-6" id="validationCustom04">
                                 <option value="0-5">0-5</option>
                                 <option value="6-10">6-10</option>
-                                <option value="10-14">10-14</option>
+                                <option value="11-14">11-14</option>
                                 <option value="15-18">15-18</option>
                            </select>
                        

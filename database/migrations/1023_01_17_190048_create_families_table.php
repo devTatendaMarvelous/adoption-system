@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('language');
             $table->string('occupation');
+            $table->string('nationalId');
             $table->string('ref_letter');
             $table->string('relationship_status');
             $table->timestamps();

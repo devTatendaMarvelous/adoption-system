@@ -13,116 +13,117 @@ class FamilyController extends Controller
 {
    public function index()
    {
-      $families=Family::all();
-    return view('families.index')->with('families',$families);
+      $families = Family::all();
+      return view('families.index')->with('families', $families);
    }
-public function search(Request $request)
-    {
+   public function search(Request $request)
+   {
 
-        $families=Family::where('rep_name','like',"%{$request->search}%")
-        ->orWhere('id_num','like',"%{$request->search}%")
-        ->orWhere('relationship_status','like',"%{$request->search}%")
-        ->orderBy('id','DESC')->get();
+      $families = Family::where('rep_name', 'like', "%{$request->search}%")
+         ->orWhere('id_num', 'like', "%{$request->search}%")
+         ->orWhere('relationship_status', 'like', "%{$request->search}%")
+         ->orderBy('id', 'DESC')->get();
 
-    return view('families.index')->with('families',$families);
-    }
+      return view('families.index')->with('families', $families);
+   }
 
    public function create()
    {
-    return view('auth.wizard');
+      return view('auth.wizard');
    }
 
 
    public function store(Request $request)
    {
-      
-     $family=$request->validate([
-            'rep_name'=>'required',
-            'dob'=>'required',
-            'id_num'=>'required',
-            'gender'=>'required',
-            'language'=>'required',
-            'occupation'=>'required',
-            'relationship_status'=>'required',
-            'email'=>'required',
-            'password'=>'required',
-            'foster_training'=>'required',
-            'foster_parent'=>'required',
-            'license'=>'required',
-            'date_completed'=>'required',
-            'race'=>'required',
-            'ref_letter'=>'required',
-            'answer'=>'required',
 
-     ]);
+      $family = $request->validate([
+         'rep_name' => 'required',
+         'dob' => 'required',
+         'id_num' => 'required',
+         'gender' => 'required',
+         'language' => 'required',
+         'occupation' => 'required',
+         'relationship_status' => 'required',
+         'email' => 'required',
+         'password' => 'required',
+         'foster_training' => 'required',
+         'foster_parent' => 'required',
+         'license' => 'required',
+         'date_completed' => 'required',
+         'race' => 'required',
+         'ref_letter' => 'required',
+         'answer' => 'required',
+         'nationalId' => 'required',
+      ]);
 
-     
-     $family['ref_letter']=$request->file('ref_letter')->store('famRefs','public');
-        
-     $fam=Family::create($family);
 
-     $family['name']=$family['rep_name'];
-     $family['role']='Family';
-     $family['family_id']=$fam->id;
-     Survey::create($family);
-     
-     RegisterController::create($family);
-     if (Auth::check()) {
-         Toastr::success('Family added successfully 🤗','Success');
+      $family['ref_letter'] = $request->file('ref_letter')->store('famRefs', 'public');
+      $family['nationalId'] = $request->file('nationalId')->store('famIds', 'public');
+
+      $fam = Family::create($family);
+
+      $family['name'] = $family['rep_name'];
+      $family['role'] = 'Family';
+      $family['family_id'] = $fam->id;
+      Survey::create($family);
+
+      RegisterController::create($family);
+      if (Auth::check()) {
+         Toastr::success('Family added successfully 🤗', 'Success');
          return redirect('families');
-      }else{
+      } else {
          return redirect('login');
       }
    }
 
-   public function edit(Request $request,$id)
+   public function edit(Request $request, $id)
    {
 
-      $family=Family::find($id);
-      return view('families.edit')->with('family',$family);
+      $family = Family::find($id);
+      return view('families.edit')->with('family', $family);
    }
    public function show($id)
    {
 
-      $family=Family::join('surveys','surveys.family_id','=','families.id')
-      ->where('families.id',$id)->get([
-         'families.*',
-         'surveys.foster_training',
-         'surveys.foster_parent',
-         'surveys.license',
-           'surveys.date_completed',
+      $family = Family::join('surveys', 'surveys.family_id', '=', 'families.id')
+         ->where('families.id', $id)->get([
+            'families.*',
+            'surveys.foster_training',
+            'surveys.foster_parent',
+            'surveys.license',
+            'surveys.date_completed',
             'surveys.race',
-      ]);
-      
-      
-      return view('families.show')->with('family',$family[0]);
+         ]);
+
+
+      return view('families.show')->with('family', $family[0]);
    }
-    public function update(Request $request,$id)
+   public function update(Request $request, $id)
    {
-     $family=$request->validate([
-            'rep_name'=>'required',
-            'dob'=>'required',
-            'id_num'=>'required',
-            'gender'=>'required',
-            'language'=>'required',
-            'occupation'=>'required',
-            'relationship_status'=>'required',
+      $family = $request->validate([
+         'rep_name' => 'required',
+         'dob' => 'required',
+         'id_num' => 'required',
+         'gender' => 'required',
+         'language' => 'required',
+         'occupation' => 'required',
+         'relationship_status' => 'required',
 
-     ]);
+      ]);
 
-     Family::find($id)->update($family);
+      Family::find($id)->update($family);
 
 
-      Toastr::success('Family Updated successfully 🤗','Success');
+      Toastr::success('Family Updated successfully 🤗', 'Success');
       return redirect('families');
    }
-    public function destroy($id){
-        $family=Family::find($id);
-        $family->delete();
-        $survey=Survey::where('family_id',$id);
-        $survey->delete();
-        Toastr::success('family deleted successfully 🤗','Success');
-        return redirect('families');
-
-    }
+   public function destroy($id)
+   {
+      $family = Family::find($id);
+      $family->delete();
+      $survey = Survey::where('family_id', $id);
+      $survey->delete();
+      Toastr::success('family deleted successfully 🤗', 'Success');
+      return redirect('families');
+   }
 }

@@ -17,14 +17,13 @@
      <div   class="col-sm-12">
      <div class="card card-table">
      <div class="card-header">
-     <div class="row">
-          <h4 class="card-title col-2">List of Donations</h4>
-    
+     <div class="r ow">
+            
                           
-          <div class="col-md-10">
+          <div class="col-md-">
                <form action="{{ route('donations.search') }}" method="post" class="row">
                     @csrf
-                    <div class="row">
+                    <div class="col-4">
                            <label for="validationCustom04">Age </label>
                               <select name="age" class="form-control text-center col-" id="validationCustom04">
                                 <option value="0-5">0-5</option>
@@ -32,15 +31,17 @@
                                 <option value="10-14">10-14</option>
                                 <option value="15-18">15-18</option>
                            </select>
+                         </div>
+                         <div class="col-4">
                            <label for="validationCustom04">Gender</label>
-
                          <select name="type" class="form-control" id="validationCustom04">
                               <option value="0">Both</option>
                               <option value="Male">Male</option>
                               <option value="Female">Female</option>
                          </select>
-                           
-                           <button class="col- btn btn-info">Search</button>
+                           </div>
+                          
+                           <button class="col-4 btn btn-info">Search</button>
                     </div>
 
                </form>

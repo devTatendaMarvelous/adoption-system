@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Family;
 use App\Models\Orphan;
 use App\Models\Adoption;
@@ -19,37 +20,43 @@ class AdoptionController extends Controller
      */
     public function index()
     {
-        if(Auth::user()->role==='Admin'){
+        if (Auth::user()->role === 'Admin') {
 
-            $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')->join('orphans','orphans.id','=','adoptions.orphan_id')
-            ->orderBy('id','DESC')->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
-        }else{
-            $id=Family::where('email',Auth::user()->email)->get('families.id')[0];
-        
-            $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')->join('orphans','orphans.id','=','adoptions.orphan_id')
-            ->where('family_id',$id->id)->orderBy('id','DESC')->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
+            $adoptions = Adoption::join('families', 'families.id', '=', 'adoptions.family_id')->join('orphans', 'orphans.id', '=', 'adoptions.orphan_id')
+                ->orderBy('id', 'DESC')->get(['adoptions.*', 'families.rep_name', 'orphans.orphan_name']);
+        } else {
+            $id = Family::where('email', Auth::user()->email)->get('families.id')[0];
+
+            $adoptions = Adoption::join('families', 'families.id', '=', 'adoptions.family_id')->join('orphans', 'orphans.id', '=', 'adoptions.orphan_id')
+                ->where('family_id', $id->id)->orderBy('id', 'DESC')->get(['adoptions.*', 'families.rep_name', 'orphans.orphan_name']);
         }
-       
-        return view('adoptions.index')->with('adoptions',$adoptions);
+
+        return view('adoptions.index')->with('adoptions', $adoptions);
     }
 
-     public function search(Request $request)
+    public function search(Request $request)
     {
 
-      $adoptions=Adoption::join('families','families.id','=','adoptions.family_id')
-      ->join('orphans','orphans.id','=','adoptions.orphan_id')
-      ->where('ref','like',"%{$request->search}%")
-       ->orWhere('adoptions.status','like',"%{$request->search}%")
-       ->orderBy('id','DESC'
-       )->get(['adoptions.*','families.rep_name','orphans.orphan_name']);
-       
-        return view('adoptions.index')->with('adoptions',$adoptions);
+        $adoptions = Adoption::join('families', 'families.id', '=', 'adoptions.family_id')
+            ->join('orphans', 'orphans.id', '=', 'adoptions.orphan_id')
+            ->where('ref', 'like', "%{$request->search}%")
+            ->orWhere('adoptions.status', 'like', "%{$request->search}%")
+            ->orderBy(
+                'id',
+                'DESC'
+            )->get(['adoptions.*', 'families.rep_name', 'orphans.orphan_name']);
+
+        return view('adoptions.index')->with('adoptions', $adoptions);
     }
 
-     public function adopt()
+    public function adopt()
     {
-        $orphans=Orphan::orderBy('id','DESC')->where('status','Available')->get();
-        return view('adoptions.adopt')->with('orphans',$orphans);
+        if (Auth::user()->role === 'Admin') {
+            Toastr::warning('You cannot adopt because you are an admin', 'Invalid action');
+            return back();
+        }
+        $orphans = Orphan::orderBy('id', 'DESC')->where('status', 'Available')->get();
+        return view('adoptions.adopt')->with('orphans', $orphans);
     }
 
     /**
@@ -59,34 +66,33 @@ class AdoptionController extends Controller
      */
     public function create($id)
     {
-        $email=Auth::user()->email;
-        $family=Family::where('email',$email)->get();
-        $fam_id=$family[0]->id;
-        
-        $orphan['family_id']=$fam_id;
-        $orphan['orphan_id']=$id;
-        $orphan['ref']= 'AMS-A'.random_int(10000,99999);
+        $email = Auth::user()->email;
+        $family = Family::where('email', $email)->get();
+        $fam_id = $family[0]->id;
+
+        $orphan['family_id'] = $fam_id;
+        $orphan['orphan_id'] = $id;
+        $orphan['ref'] = 'AMS-A' . random_int(10000, 99999);
         Adoption::create($orphan);
-        Toastr::success('Adoption request created 🤗','Success');
-        return redirect('adoptions');
-        
-    }
-     public function approve($id)
-    {
-        $adoption=Adoption::find($id);
-        $adoption->status='Approved';
-        $adoption->save();
-
-        Toastr::success('adoption Approved 🤗','Success');
+        Toastr::success('Adoption request created 🤗', 'Success');
         return redirect('adoptions');
     }
-     public function reject($id)
+    public function approve($id)
     {
-        $adoption=Adoption::find($id);
-        $adoption->status='Rejected';
+        $adoption = Adoption::find($id);
+        $adoption->status = 'Approved';
         $adoption->save();
 
-        Toastr::success('adoption Rejected 😒','Success');
+        Toastr::success('adoption Approved 🤗', 'Success');
+        return redirect('adoptions');
+    }
+    public function reject($id)
+    {
+        $adoption = Adoption::find($id);
+        $adoption->status = 'Rejected';
+        $adoption->save();
+
+        Toastr::success('adoption Rejected 😒', 'Success');
         return redirect('adoptions');
     }
 
@@ -143,17 +149,16 @@ class AdoptionController extends Controller
      */
     public function destroy($id)
     {
-        
-        $adoption=Adoption::find($id);
 
-        
-     
-      
-       
+        $adoption = Adoption::find($id);
+
+
+
+
+
 
         $adoption->delete();
-        Toastr::success('adoption deleted successfully 🤗','Success');
+        Toastr::success('adoption deleted successfully 🤗', 'Success');
         return redirect('adoptions');
-        
     }
 }

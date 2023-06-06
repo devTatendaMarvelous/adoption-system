@@ -28,22 +28,32 @@ class OrphanController extends Controller
                 'orphans.orphan_name'
             ]);
 
-        // dd($transfers);
-
         return view('orphans.transfers')->with('transfers', $transfers)->with('carbon', Carbon::class);
     }
 
     public function search(Request $request)
+    {
+        $orphans = Orphan::where('status', 'like', '%' . $request->search . '%')->get();
+        return view('orphans.index')->with('orphans', $orphans)->with('carbon', Carbon::class);
+    }
+
+    public function age(Request $request)
     {
         $range = explode("-", $request->age);
         $low = intval($range[0]);
         $high = intval($range[1]);
         $now = Carbon::now();
         $low = $now->subYear($low);
+        $low = $low->year . '-' . $low->month . '-' . $low->day;
+        $low = date("Y-m-d", strtotime($low));
+
         $high = $now->subYear($high);
+        $high = $high->year . '-' . $high->month . '-' . $high->day;
+        $high = date("Y-m-d", strtotime($high));
 
 
-        $orphans = Orphan::whereYear('dob', '<=', $high->year)->get();
+        $orphans = Orphan::whereBetween('dob', [$high, $low])->get();
+
 
         return view('orphans.index')->with('orphans', $orphans)->with('carbon', Carbon::class);
     }

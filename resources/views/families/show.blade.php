@@ -91,7 +91,7 @@
           </div>
           
      </div>
-     <div class="col-md-4">
+     <div class="col-md-3">
           
           <div class="row">
           <p class="col-sm-3 text-muted text-sm-right mb-0 mb-sm-3">Taken Foster Training?</p>
@@ -114,6 +114,7 @@
           <p class="col-sm-9"><a class="btn btn-primary" href="{{ asset('storage/'.$family->ref_letter)}}">View Reference Letter</a></p>
           </div>
      </div>
+     <p class="col-sm-9"><a class="btn btn-primary" href="{{ asset('storage/'.$family->nationalId)}}">View National Id</a></p>
 </div>
 
 

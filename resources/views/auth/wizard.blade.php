@@ -135,6 +135,10 @@
                     <option value="Female">Female</option>
               </select>
         </div>
+        <div class="col-md-3">
+            Upload your national Id
+               <input class="form-control "  name="nationalId" type="file" >
+        </div>
    
         <div class="col-md-12 my-5 text center">
            

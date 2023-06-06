@@ -44,8 +44,8 @@
 
 </script>
 </head>
-<body>
-<div class="main-wrapper">
+<body style="background: url('../../../public/bg.jpeg'); background-size:cover;">
+<div class="main-wrapper" >
 <x-navbar/>
 <x-sidebar/>
 
