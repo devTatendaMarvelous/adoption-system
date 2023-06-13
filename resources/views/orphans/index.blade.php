@@ -57,6 +57,7 @@
 <tr>
 <th>Name</th>
 <th>Date Of Birth</th>
+<th>Birth number</th>
 <th>Birth Certificate</th>
 <th>Gender</th>
 <th>Description</th>
@@ -75,6 +76,10 @@
           </td>
           <td>{{ $carbon::parse($orphan->dob )->format('d M Y') }}</td>
           <td>{{ $orphan->birth_id }}</td>
+          <td>
+               <a href="{{ asset('storage/'.$orphan->birth)  }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Birth</a>
+               
+                   
           <td>{{ $orphan->gender }}</td>
           <td>{{ $orphan->description }}</td>
         

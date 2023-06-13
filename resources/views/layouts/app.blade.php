@@ -32,6 +32,11 @@
 <link rel="stylesheet" href="{{ asset('assets/plugins/light-gallery/css/lightgallery.min.css')}}">
 <link rel="stylesheet" href="{{ URL::to('assets/toastr.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
+<style>
+	.hidden{
+		display: none;
+	}
+</style>
 <script src="{{ URL::to('assets/toastr_jquery.min.js') }}"></script>
 	<script src="{{ URL::to('assets/toastr.min.js') }}"></script>
 </head> 
@@ -107,6 +112,21 @@
 				});
 
 			})();
+		</script>
+		<script>
+			
+			function cp(){
+			function checkPassword() {
+				const str = document.querySelector('#password')
+				var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+				return re.test(str);
+			}
+			
+			if(checkPassword()){
+				const btn=document.querySelector('.btn')
+				btn.removeClass('hidden')
+			}
+		}
 		</script>
 </body>
 

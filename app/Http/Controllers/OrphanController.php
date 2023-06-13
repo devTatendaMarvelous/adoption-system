@@ -76,8 +76,10 @@ class OrphanController extends Controller
             'gender' => 'required',
             'description'     => 'required',
             'birth_id' => 'required',
+            'birth' => 'required',
         ]);
         $orphan['photo'] = $request->file('photo')->store('orphanPhotos', 'public');
+        $orphan['birth'] = $request->file('birth')->store('orphanBirths', 'public');
 
         Orphan::create($orphan);
         Toastr::success('Orphan added successfully 🤗', 'Success');

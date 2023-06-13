@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Auth\RegisterController;
-use Brian2694\Toastr\Facades\Toastr;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Family;
 use App\Models\Survey;
+use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\RegisterController;
 
 class FamilyController extends Controller
 {
@@ -35,6 +36,11 @@ class FamilyController extends Controller
 
    public function store(Request $request)
    {
+      $user = User::where('email', $request->email)->first();
+      if ($user) {
+         Toastr::error('The email you have entered is already taken', 'Error');
+         return redirect('families/create');
+      }
 
       $family = $request->validate([
          'rep_name' => 'required',

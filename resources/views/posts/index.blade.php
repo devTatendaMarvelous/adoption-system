@@ -59,7 +59,7 @@
           </td>
           <td>{{ $post->created_at }}</td>
           
-        @if (Auth::user()->role==='Admin')
+        @if (Auth::user()->role==='Admin'&& $post->status==='Pending')
         
                <td class="text-center">
                     <div class="actions">

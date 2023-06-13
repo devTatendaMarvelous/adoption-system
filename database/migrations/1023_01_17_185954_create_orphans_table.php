@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('dob');
             $table->string('gender');
             $table->string('birth_id')->unique();
+            $table->string('birth');
             $table->text('description');
             $table->string('photo')->nullable();
             $table->string('status')->default('Pending');

@@ -40,8 +40,8 @@ Looks good!
 Please enter Orphan full name.
 </div>
 </div>
-<div class="col-md-4 mb-3">
-<label for="validationCustom01">Birth Certificate</label>
+<div class="col-md-3 mb-3">
+<label for="validationCustom01">Birth Number</label>
 <input type="text" class="form-control" name="birth_id" id="validationCustom01" placeholder="Birth Certificate Number"  required>
 <div class="valid-feedback">
 Looks good!
@@ -50,7 +50,17 @@ Looks good!
 Please enter Orphan Birth Number.
 </div>
 </div>
-<div class="col-md-4 mb-3">
+<div class="col-md-3 mb-3">
+<label for="validationCustom02">Birth Certificate</label>
+<input type="file" class="form-control" name="birth" id="validationCustom02" placeholder="Last name" accept="image/*" required>
+<div class="valid-feedback">
+Looks good!
+</div>
+<div class="invalid-feedback">
+Please upload Orphan  birth  certificate.
+</div>
+</div>
+<div class="col-md-2 mb-3">
 <label for="validationCustom02">Date Of Birth</label>
 <input type="date" class="form-control" name="dob" id="validationCustom02" placeholder="Last name"  required>
 <div class="valid-feedback">
@@ -62,7 +72,7 @@ Please enter Orphan date of birth.
 </div>
 <div class="col-md-6 mb-3">
 <label for="validationCustomUsername">Description</label>
-     <textarea name="description" class="form-control" id="validationCustomUsername" cols="30" rows="10" placeholder="Description"></textarea>
+     <textarea name="description" class="form-control" id="validationCustomUsername" cols="30" rows="4" placeholder="Description"></textarea>
 <div class="invalid-feedback">
 Please choose a username.
 </div>
@@ -86,6 +96,7 @@ Please provide a photo.
 
 </div>
 </div></div>
+
 </div>
 
 <button class="btn btn-primary" type="submit">Add Orphan</button>

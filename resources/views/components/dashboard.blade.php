@@ -63,8 +63,9 @@
                // Get the file size in bytes
                var fileSize = file.size;
                if(fileSize>5000000){
-                    // Display the file size
+				// Display the file size
                     alert( "You can not upload a file larger than 5mb")
+				fileInput.files=[]
                }
           }
 </script>

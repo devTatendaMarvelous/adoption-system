@@ -32,10 +32,14 @@
 <link rel="stylesheet" href="{{ asset('assets/plugins/light-gallery/css/lightgallery.min.css')}}">
 
 <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
-</head> </head>
+<link rel="stylesheet" href="{{ URL::to('assets/toastr.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
+<script src="{{ URL::to('assets/toastr_jquery.min.js') }}"></script>
+	<script src="{{ URL::to('assets/toastr.min.js') }}"></script>
+</head>
 <body style="background-image: url('{{ asset('fam.jpg') }}'); background-size:cover;">
 
-
+{!! Toastr::message() !!}
 @yield('content')
 
 
