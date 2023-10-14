@@ -41,6 +41,7 @@ class DeployCommand extends Command
         ]);
         $this->info(shell_exec('git stash apply'));
         $this->call('migrate --seed');
+        $this->call('storage:link');
 //        $this->call('view:cache ');
 //        $this->call('config:cache ');
         $this->info('Bringing application up...');
