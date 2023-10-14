@@ -40,7 +40,7 @@ class DeployCommand extends Command
             '--force' => true,
         ]);
         $this->info(shell_exec('git stash apply'));
-        $this->call('migrate --seed');
+        $this->call('migrate',['--seed'=>true]);
         $this->call('storage:link');
 //        $this->call('view:cache ');
 //        $this->call('config:cache ');
