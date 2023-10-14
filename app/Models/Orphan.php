@@ -11,7 +11,7 @@ class Orphan extends Model
     use HasFactory;
     protected $fillable=[
         'orphan_name',	'dob' ,	'gender' ,	'description' ,'status'	,'photo',
-             'birth_id'
+             'birth_id','orphanage_id',
     ];
 
         public function created_at_mdY()
@@ -20,5 +20,8 @@ class Orphan extends Model
 
        return Carbon::parse($this->created_at)->format('d M Y');
 
-    } 
+    }
+    public function orphanage(){
+            return $this->belongsTo(User::class, 'orphanage_id');
+    }
 }

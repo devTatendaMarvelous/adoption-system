@@ -21,13 +21,15 @@
 
 <div class="card-header">
      <div class="row">
-          
-                              
+
+
 
           <h4 class="card-title col-md-3">List of Orphans</h4>
+         @if (Auth::user()->role==="Admin")
           <button type="button" class="col-md-2 btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">
                               Upload CSV
                               </button>
+         @endif
                               <div class="col-md-1"></div>
           <div class="col-md-6">
                <form action="{{ route('orphans.search') }}" method="post" class="row">
@@ -50,7 +52,7 @@
 <th>Date Of Birth</th>
 <th>Birth Certificate</th>
 <th>Gender</th>
-<th>Description</th>
+<th>Orphanage</th>
 <th>Created at</th>
 <th class="text-center">Action</th>
 </tr>
@@ -67,8 +69,8 @@
           <td>{{ $carbon::parse($orphan->dob )->format('d M Y') }}</td>
           <td>{{ $orphan->birth_id }}</td>
           <td>{{ $orphan->gender }}</td>
-          <td>{{ $orphan->description }}</td>
-        
+          <td>{{ $orphan->orphanage->name }}</td>
+
           <td>{{  $carbon::parse($orphan->created_at)->format('d M Y') }}</td>
           <td class="text-center">
                <div class="actions">
@@ -84,11 +86,11 @@
                </div>
           </td>
      </tr>
-     
+
      @empty
-          
+
      @endforelse
-     
+
 
 </tbody>
 </table>
@@ -116,11 +118,11 @@
       <form action="{{ route('orphans.csv') }}" method="post" enctype="multipart/form-data">
           @csrf
            <div class="modal-body">
-              
+
                <div class="form-group">
                     <input type="file" name="csv"class="form-control">
                </div>
-            
+
            </div>
            <div class="modal-footer">
              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

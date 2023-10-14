@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('orphans', function (Blueprint $table) {
             $table->id();
             $table->string('orphan_name');
+            $table->integer('orphanage_id');
             $table->date('dob');
             $table->string('gender');
             $table->string('birth_id')->unique();

@@ -52,7 +52,7 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
      Route::post('/user', 'update')->name('user.update');
     });
 
-    
+
     // ====================================================================================================================================
 
       Route::controller(DonationController::class)->group(function(){
@@ -69,7 +69,7 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
     // ====================================================================================================================================
      // ====================================================================================================================================
 
-      Route::controller(AppointmentController::class)->group(function(){
+    Route::controller(AppointmentController::class)->group(function(){
         Route::get('/appointments', 'index')->name('appointments');
         Route::get('/email', 'terminate');
         Route::get('/appointments/donate', 'donate')->name('appointments.donate');
@@ -82,8 +82,18 @@ Route::group(['namespace'=>'App\Http\Controllers','middleware'=>'auth'], functio
         Route::post('/appointments/{id}/reject', 'reject')->name('appointments.reject');
         // Route::post('/families/search', 'search');
     });
+
+    Route::controller(OrphanagesController::class)->group(function(){
+        Route::get('/orphanages', 'index')->name('orphanages');
+        Route::get('/appointments/donate', 'donate')->name('appointments.donate');
+        Route::get('/orphanages/create', 'create')->name('orphanages.create');
+        Route::post('/orphanages', 'store')->name('orphanages');
+        Route::get('/orphanages/{id}/edit', 'edit')->name('orphanages.edit');
+        Route::post('/orphanages/{id}', 'update')->name('orphanages.update');
+        Route::get('/orphanages/{id}/delete', 'destroy')->name('orphanages.delete');
+    });
     // ====================================================================================================================================
-      // ====================================================================================================================================
+    // ====================================================================================================================================
 
       Route::controller(AdoptionController::class)->group(function(){
         Route::get('/adoptions', 'index')->name('adoptions');

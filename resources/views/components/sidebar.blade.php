@@ -10,14 +10,25 @@
 </li>
 
 @if (Auth::user()->role==="Admin")
- <li class="submenu">
-<a href="#"><i class="fe fe-users"></i> <span> Orphans</span> <span class="menu-arrow"></span></a>
-<ul style="display: none;">
-<li><a class="" href="{{ route('orphans') }}">All Orphans</a></li>
-<li><a class="" href="{{ route('orphans.create') }}">Add Orphan</a></li>
+        <li class="submenu">
+            <a href="#"><i class="fe fe-users"></i> <span> Orphanages</span> <span class="menu-arrow"></span></a>
+            <ul style="display: none;">
+                <li><a class="" href="{{ route('orphanages') }}"> Orphanage List</a></li>
+                <li><a class="" href="{{ route('orphanages.create') }}">Add Orphanage</a></li>
 
-</ul>
-</li>
+            </ul>
+        </li>
+    @endif
+        <li class="submenu">
+            <a href="#"><i class="fe fe-users"></i> <span> Orphans</span> <span class="menu-arrow"></span></a>
+            <ul style="display: none;">
+                <li><a class="" href="{{ route('orphans') }}">All Orphans</a></li>
+                @if (Auth::user()->role==="Orphanage")
+                <li><a class="" href="{{ route('orphans.create') }}">Add Orphan</a></li>
+                @endif
+            </ul>
+        </li>
+    @if (Auth::user()->role==="Admin")
  <li class="submenu">
 <a href="#"><i class="fe fe-users"></i> <span> Families</span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
@@ -32,14 +43,14 @@
 <li class="submenu">
 <a href="#"><i class="fe fe-money"></i> <span> Donations </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
-    
+
 <li><a class="" href="{{ route('donations') }}"> All Donations </a></li>
 <li><a class="" href="{{ route('donations.donate') }}"> Donate </a></li>
 <li><a class="" href="{{ route('donations.group') }}"> Group Donate </a></li>
 </ul>
 </li>
 @if (Auth::user()->role != 'Donor')
-     
+
 
 <li class="submenu">
 <a href="#"><i class="fe fe-user-plus"></i> <span> Adoptions </span> <span class="menu-arrow"></span></a>
@@ -63,7 +74,7 @@
 </ul>
 </li>
 
-{{-- 
+{{--
 <li class="submenu">
 <a href="#"><i class="fe fe-warning"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">

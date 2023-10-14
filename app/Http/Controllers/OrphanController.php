@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Carbon\Carbon;
 use App\Models\Orphan;
 use App\Models\Transfer;
@@ -15,8 +16,6 @@ class OrphanController extends Controller
      public function index()
     {
        $orphans=Orphan::all();
-
-          
        return view('orphans.index')->with('orphans',$orphans)->with('carbon',Carbon::class);
     }
     public function transfers()
@@ -28,7 +27,7 @@ class OrphanController extends Controller
                     'orphans.orphan_name'
                 ]);
                 // dd($transfers);
-          
+
        return view('orphans.transfers')->with('transfers',$transfers)->with('carbon',Carbon::class);
     }
 
@@ -42,8 +41,8 @@ class OrphanController extends Controller
        ->orWhere('gender','like',"%{$request->search}%")
        ->orWhere('birth_id','like',"%{$request->search}%")
        ->get();
-        
-          
+
+
        return view('orphans.index')->with('orphans',$orphans)->with('carbon',Carbon::class);
     }
 
@@ -57,7 +56,7 @@ class OrphanController extends Controller
        return view('orphans.show')->with('orphan',$orphan);
     }
     public function store(Request $request){
-        
+
         $orphan=$request->validate([
            	'orphan_name'=>'required',
             'dob' =>'required',
@@ -66,11 +65,11 @@ class OrphanController extends Controller
              'birth_id'=>'required',
         ]);
         $orphan['photo']=$request->file('photo')->store('orphanPhotos','public');
-        
+        $orphan['orphanage_id']=auth()->user()->id;
         Orphan::create($orphan);
         Toastr::success('Orphan added successfully 🤗','Success');
         return redirect('orphans');
-        
+
     }
 
 public function convertDate($dt)
@@ -94,6 +93,7 @@ public function convertDate($dt)
                         'gender' => $data['2'],
                         'birth_id' => $data['3'],
                         'description' => $data['4'],
+                        'orphanage_id' => $data['5'],
                     ]);
                 }catch(Exception $e){
                     dd($e->getMessage());
@@ -103,7 +103,7 @@ public function convertDate($dt)
         }
         fclose($csvData);
 
-        
+
         Toastr::success('Orphans added successfully 🤗','Success');
         return redirect('orphans');
     }
@@ -117,29 +117,37 @@ public function convertDate($dt)
     }
      public function transfer($id)
     {
-       return view('orphans.transfer')->with('id',$id);
+        $orphanages=User::where('role','Orphanage')->get();
+
+       return view('orphans.transfer')->with('id',$id)->with('orphanages',$orphanages);
     }
     public function transferSave(Request $request,$id)
     {
-       
-        $trannsfer=$request->validate([
-            'orphanage'=>'required',
-            'notes'=>'required'
-        ]);
-        $trannsfer['orphan_id']=$id;
-        $trannsfer['initiator']=Auth::user()->id;
-        $trannsfer['status']='Success';
+        try {
 
-        Transfer::create($trannsfer);
-        $orphan=Orphan::find($id);
-        $orphan['status']='Transferred';
-        $orphan->save();
-        
-       return redirect('orphans');
+            $trannsfer = $request->validate([
+                'orphanage_id' => 'required',
+                'notes' => 'required'
+            ]);
+
+            $trannsfer['orphanage'] = User::find($trannsfer['orphanage_id'])->name;
+            $trannsfer['orphan_id'] = $id;
+            $trannsfer['initiator'] = Auth::user()->id;
+            $trannsfer['status'] = 'Success';
+            Transfer::create($trannsfer);
+            $orphan = Orphan::find($id);
+            $orphan['status'] = 'Transferred';
+            $orphan['orphanage_id'] = $trannsfer['orphanage_id'];
+            $orphan->save();
+
+            return redirect('orphans');
+        }catch(\Exception $e){
+            return $e->getMessage();
+        }
     }
 
     public function update(Request $request,$id){
-        
+
         $orphanUpdated=$request->validate([
            	'orphan_name'=>'required',
             'dob' =>'required',
@@ -157,33 +165,33 @@ public function convertDate($dt)
             }
              $orphanUpdated['photo']=$request->file('photo')->store('orphanPhotos','public');
         }
-       
+        $orphanUpdated['orphanage_id']=auth()->user()->id;
 
         $orphan->update($orphanUpdated);
         Toastr::success($orphanUpdated['orphan_name'].' updated successfully 🤗','Success');
         return redirect('orphans');
-        
+
     }
 
     public function destroy($id){
-        
-        
+
+
 
         $orphan=Orphan::find($id);
 
-        
+
             $photo=public_path('storage\\'.$orphan->photo);
             if(File::exists($photo)){
                 File::delete($photo);
             }
-            
-      
-       
+
+
+
 
         $orphan->delete();
         Toastr::success('Orphan deleted successfully 🤗','Success');
         return redirect('orphans');
-        
+
     }
 
 }
