@@ -25,7 +25,7 @@
 
 
           <h4 class="card-title col-md-3">List of Orphans</h4>
-         @if (Auth::user()->role==="Admin")
+         @if (Auth::user()->role==="Orphanage")
           <button type="button" class="col-md-2 btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">
                               Upload CSV
                               </button>

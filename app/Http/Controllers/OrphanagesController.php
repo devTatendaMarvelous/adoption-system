@@ -48,7 +48,8 @@ class OrphanagesController extends Controller
         if ($request->has('photo')) {
             $orphanage['photo'] = $request->file('photo')->store('profilePhotos', 'public');
         }
-        $orphanage['password'] = Hash::make('password');
+            $orphanage['role'] ='Orphanage';
+            $orphanage['password'] = Hash::make('password');
         $id = User::create($orphanage)->id;
         $orphanage['user_id'] = $id;
         Orphanage::create($orphanage);

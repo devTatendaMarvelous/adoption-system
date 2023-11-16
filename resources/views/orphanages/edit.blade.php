@@ -58,7 +58,7 @@
                                             </div>
                                             <div class="col-md-4 mb-3">
                                                 <label for="validationCustomUsername">Address</label>
-                                                <textarea name="address" class="form-control" id="validationCustomUsername" cols="30" rows="10" placeholder="Address">value="{{$orphanage->address}}"</textarea>
+                                                <textarea name="address" class="form-control" id="validationCustomUsername" cols="30" rows="10" placeholder="Address">{{$orphanage->address}}</textarea>
                                                 <div class="invalid-feedback">
                                                     Please choose a username.
                                                 </div>

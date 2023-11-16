@@ -15,7 +15,14 @@ class OrphanController extends Controller
 {
      public function index()
     {
-       $orphans=Orphan::all();
+//        dd(auth()->user()->id);
+         if(auth()->user()->role=='Orphanage'){
+             $orphans=Orphan::where('orphanage_id',auth()->user()->id)->get();
+         }else{
+             $orphans=Orphan::all();
+         }
+
+
        return view('orphans.index')->with('orphans',$orphans)->with('carbon',Carbon::class);
     }
     public function transfers()
@@ -86,14 +93,14 @@ public function convertDate($dt)
         while (($data = fgetcsv($csvData, 555, ',')) !== false) {
             if (!$transRow) {
                 try{
-
                     Orphan::create([
                         'orphan_name' => $data['0'],
                         'dob' =>  $this->convertDate($data['1']),
                         'gender' => $data['2'],
                         'birth_id' => $data['3'],
                         'description' => $data['4'],
-                        'orphanage_id' => $data['5'],
+                        'orphanage_id' => auth()->user()->id,
+                        'status' => 'Available'
                     ]);
                 }catch(Exception $e){
                     dd($e->getMessage());
